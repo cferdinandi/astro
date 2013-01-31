@@ -1,6 +1,6 @@
 /*
 
-    ASTRO-NAVBAR.CSS v1.0
+    ASTRO.CSS v1.0
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -141,6 +141,10 @@ img, audio, video, canvas { max-width: 100%; }
         max-height: 9999px;
     }
 
+    .js .nav {
+        text-align: left;
+    }
+
     /*  Display navigation items as full-width, stacked blocks when javascript supported */
     .js .nav-collapse li {
         display: block;
@@ -167,9 +171,10 @@ img, audio, video, canvas { max-width: 100%; }
         text-align: left;
     }
 
-    /*  Float logo to the left */
+    /*  Float logo to the left and remove margin-bottom */
     .logo {
         float: left;
+        margin-bottom: 0;
     }
 
     /*  Align navigation elements to the right */
