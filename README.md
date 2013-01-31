@@ -3,15 +3,15 @@ Astro is a collection of five mobile-first navigation patterns. It's style-light
 
 Each pattern contains two small-screen variants:
 1. A simple version.
-2. A collapse-and-expand version toggled by a menu button.
+2. A collapse-and-expand option toggled by a menu button.
 
 Pick the one that best fits your project.
 
 ## How It Works
-Getting started with Astro is pretty easy. [View the online tutorial](#) or dig through the example.html files.
+Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the example.html files.
 
 ## Changelog
-* DATE
+* 1/31/2013
   * Initial release.
 
 ## License
