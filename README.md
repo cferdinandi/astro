@@ -11,6 +11,8 @@ Pick the one that best fits your project.
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the example.html files.
 
 ## Changelog
+* 2/5/2013
+  * Switched to relative sizing (ems and %'s instead of px).
 * 1/31/2013
   * Initial release.
 

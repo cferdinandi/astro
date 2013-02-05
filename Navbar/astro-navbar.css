@@ -26,7 +26,7 @@ img, audio, video, canvas { max-width: 100%; }
 
 /*  Sets Body Width */
 .container { 
-    max-width: 640px;
+    max-width: 40em;
     width: 88%;
     margin-left: auto; 
     margin-right: auto;
@@ -44,13 +44,15 @@ img, audio, video, canvas { max-width: 100%; }
     text-align: center;
 }
 
-/*  For text-based logo, override default link styling */
+/*  For text-based logo, override default link styling.
+ *  If .logo and .nav don't align properly,
+ *  adjust the .logo line-height. */
 .logo {
     display: inline-block;
     font-size: 1.2em;
-    line-height: 1;
+    line-height: 1.2;
     color: #272727;
-    margin-bottom: .3em;
+    margin-bottom: .470588235em;
     text-decoration: none;
 }
 
@@ -72,8 +74,8 @@ img, audio, video, canvas { max-width: 100%; }
 .nav > li {
     display: inline-block;
     float: none;
-    margin-left: .3em;
-    margin-right: .3em;
+    margin-left: .470588235em;
+    margin-right: .470588235em;
 }
 
 /*  Remove margin-left on first navigation item */
@@ -96,7 +98,7 @@ img, audio, video, canvas { max-width: 100%; }
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -138,7 +140,7 @@ img, audio, video, canvas { max-width: 100%; }
      *  Uses max-height instead of display: none to allow for 
      *  CSS3 animations, which don't work on display values. */
     .js .nav-collapse.active {
-        max-height: 9999px;
+        max-height: 600em;
     }
 
     .js .nav {
@@ -154,8 +156,8 @@ img, audio, video, canvas { max-width: 100%; }
                 box-sizing: border-box;
         margin-left: 0;
         margin-right: 0;
-        padding-top: .3em;
-        padding-bottom: .3em;
+        padding-top: .235294118em;
+        padding-bottom: .235294118em;
     }
 
 }
@@ -164,7 +166,7 @@ img, audio, video, canvas { max-width: 100%; }
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 681px) {
+@media (min-width: 40em) {
 
     /*  Align text to the left */
     .nav-wrap {
@@ -174,7 +176,6 @@ img, audio, video, canvas { max-width: 100%; }
     /*  Float logo to the left and remove margin-bottom */
     .logo {
         float: left;
-        margin-bottom: 0;
     }
 
     /*  Align navigation elements to the right */

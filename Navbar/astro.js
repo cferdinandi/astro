@@ -1,12 +1,12 @@
 /* =============================================================
- * houdini.js v1.0.0
- * A simple collapse-and-expand navigation widget.
+ * astro.js v1.0.0
+ * Mobile-first navigation patterns.
  * Script by Chris Ferdinandi - http://gomakethings.com
  * Licensed under WTFPL - http://www.wtfpl.net/
  * ============================================================= */
 
 $(function () {
-    $('.collapse-toggle').click(function(e) { // When a link or button with the .collapse-toggle class is clicked
+    $('.nav-toggle').click(function(e) { // When a link or button with the .nav-toggle class is clicked
         e.preventDefault(); // Prevent the default action from occurring
 
         // Set Variables
