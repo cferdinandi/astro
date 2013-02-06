@@ -16,5 +16,8 @@ Getting started with Astro is pretty easy. [View the online tutorial](http://cfe
 * 1/31/2013
   * Initial release.
 
+## Roadmap
+* Convert jQuery to vanilla JavaScript.
+
 ## License
 Astro is licensed under [WTFPL](http://www.wtfpl.net/).
