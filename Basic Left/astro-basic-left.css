@@ -79,7 +79,7 @@ img, audio, video, canvas { max-width: 100%; }
 }
 
 /*  Remove margin-right on last navigation item */
-.nav >li:last-child {
+.nav > li:last-child {
     margin-right: 0;
 }
 
