@@ -1,18 +1,19 @@
-/*
+/* =============================================================
 
-    ASTRO.CSS v1.0
+    Astro Navbar Left 2.0
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
-
 
     Licensed under WTFPL.
     http://www.wtfpl.net/
     
+ * ============================================================= */
 
-*/
 
-/*  RESPONSIVE RESET */
-/*  Replace with your own */
+/* =============================================================
+    RESPONSIVE RESET
+    Replace with your own.
+ * ============================================================= */
 
 @-webkit-viewport { width: device-width; zoom: 1.0; }
    @-moz-viewport { width: device-width; zoom: 1.0; }
@@ -36,8 +37,10 @@ img, audio, video, canvas { max-width: 100%; }
 
 
 
-/*  ASTRO NAVBAR LEFT */
-/*  Navigation menu styling */
+/* =============================================================
+    ASTRO NAVBAR LEFT
+    Navigation menu styling.
+ * ============================================================= */
 
 /*  Center all navigation elements */
 .nav-wrap {
@@ -187,4 +190,17 @@ img, audio, video, canvas { max-width: 100%; }
         margin-right: .470588235em;
     }
 
+}
+
+
+/*  Clearfix */
+
+.nav-wrap:before, .nav-wrap:after { 
+    display: table; 
+    content: ""; 
+    *zoom: 1; 
+}
+
+.nav-wrap:after { 
+    clear: both; 
 }

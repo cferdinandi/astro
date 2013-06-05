@@ -1,4 +1,4 @@
-# Astro - Mobile-first navigation patterns
+# Astro
 Astro is a collection of five mobile-first navigation patterns. It's style-light so you can easily modify it to fit your design.
 
 Each pattern contains two small-screen variants:
@@ -11,14 +11,16 @@ Pick the one that best fits your project.
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the `index.html` files.
 
 ## Changelog
-* 2/13/2013
+* v2.0 (June 5, 2013)
+  * Removed `href` as element selector. Just `data-target` supported now.
+* v1.1 (February 13, 2013)
   * Renamed `example.html` to `index.html`.
   * Removed "Convert to Vanilla JS" from roadmap.
-* 2/10/2013
+* v1.1 (February 10, 2013)
   * Added placeholder active link styling.
-* 2/5/2013
+* v1.1 (February 5, 2013)
   * Switched to relative sizing (ems and %'s instead of px).
-* 1/31/2013
+* v1.0 (January 31, 2013)
   * Initial release.
 
 ## License
