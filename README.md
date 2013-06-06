@@ -8,7 +8,7 @@ Each pattern contains two small-screen variants:
 Pick the one that best fits your project.
 
 ## How It Works
-Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the `index.html` files.
+Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the sample HTML files.
 
 ## Changelog
 * v2.0 (June 5, 2013)
