@@ -19,17 +19,12 @@
 	    <h1 style="text-align: center; font-size: 3em;">Astro Stacked</h1>
 	    <p style="text-align: center; font-size: 1.5em;">Mobile-First Navigation Patterns</p>
 
-        <p>This pattern contains two small-screen variants:</p>
-
-        <ol>
-            <li>A simple version.</li>
-            <li>A collapsed version toggled by a menu button.</li>
-        </ol>
-
-        <hr>
+        <p>Stacked navigation on big screens. Inline navigation on smaller screens.</p>
 
 
         <h2>Simple Version</h2>
+
+        <p>If you're using the simple version, remove the content under <code>@media (max-width: 40em)</code> from the stylesheet.</p>
 
         <nav class="nav-wrap">
             <a class="logo" href="#">My Brand</a>
@@ -38,11 +33,11 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-
-        <hr>
         
 
-        <h2>Collapse-and-Expand Version</h2>
+        <h2>Expand-and-Collapse Option</h2>
+        
+        <p>If you're using the expand-and-collapse option, be sure to include <code>astro.js</code> and <a href="http://jquery.com/">jQuery</a>.</p>
 
         <nav class="nav-wrap">
             <a class="logo" href="#">My Brand</a>
