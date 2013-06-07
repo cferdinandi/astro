@@ -11,6 +11,8 @@ Pick the one that best fits your project.
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the sample HTML files.
 
 ## Changelog
+* v2.0 (June 7, 2013)
+  * Switched to MIT license.
 * v2.0 (June 5, 2013)
   * Removed `href` as element selector. Just `data-target` supported now.
 * v1.1 (February 13, 2013)
@@ -24,4 +26,4 @@ Getting started with Astro is pretty easy. [View the online tutorial](http://cfe
   * Initial release.
 
 ## License
-Astro is licensed under [WTFPL](http://www.wtfpl.net/).
+Astro is free to use under the [MIT License](http://gomakethings.com/mit/).
