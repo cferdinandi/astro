@@ -130,7 +130,7 @@ img, audio, video, canvas { max-width: 100%; }
      *  Uses max-height instead of display: none to allow for 
      *  CSS3 animations, which don't work on display values. */
     .js .nav-collapse.active {
-        max-height: 600em;
+        max-height: 9999em;
     }
 
     /*  Display navigation items as full-width, stacked blocks when javascript supported */

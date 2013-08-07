@@ -11,6 +11,8 @@ Pick the one that best fits your project.
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the sample HTML files.
 
 ## Changelog
+* v3.0 (August 7, 2013)
+  * Rewritten in vanilla JS.
 * v2.0 (June 7, 2013)
   * Switched to MIT license.
 * v2.0 (June 5, 2013)

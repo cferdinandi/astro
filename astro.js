@@ -1,6 +1,6 @@
 /* =============================================================
 
-    Astro v2.0
+    Astro v3.0
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -9,35 +9,69 @@
     
  * ============================================================= */
 
-(function($) {
-    $(function () {
-        $('.nav-toggle').click(function(e) { // When a link or button with the .nav-toggle class is clicked
-            e.preventDefault(); // Prevent the default action from occurring
-            var dataID = $(this).attr('data-target'); // Get the ID of navigation menu
-            $(dataID).toggleClass('active'); // Add or remove the .active class from the navigation menu
-        });
-    });
-})(jQuery);
 
+/* =============================================================
+    CLASS HANDLERS
+    https://gist.github.com/cferdinandi/6146930
+ * ============================================================= */
 
+// Check if an element has a class
+var hasClass = function (elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
 
+// Add a class to an element
+var addClass = function (elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+
+// Remove a class from an element
+var removeClass = function (elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
 
 
 /* =============================================================
-
-    Progressively Enhanced JS v1.0
-    Adds .js class to <body> for progressive enhancement.
-
-    Script by Chris Ferdinandi.
-    http://gomakethings.com
-
-    Free to use under the MIT License.
-    http://gomakethings.com/mit/
-    
+    ASTRO FUNCTIONS
+    Toggle the navigation menu.
  * ============================================================= */
 
-(function($) {
-    $(function () {
-        $('body').addClass('js'); // On page load, add the .js class to the <body> element.
+// "Cut the Mustard" test
+if ( 'querySelector' in document && 'addEventListener' in window ) {
+
+    // Get all '.nav-toggle' elements
+    var navToggle = document.querySelectorAll('.nav-toggle');
+
+    // For each '.nav-toggle'
+    [].forEach.call(navToggle, function (toggle) {
+
+        // When '.nav-toggle' clicked
+        toggle.addEventListener('click', function(e) {
+
+            // Prevent the default action from occurring
+            e.preventDefault();
+
+            // Get target navigation menu
+            var dataID = this.dataset.target;
+            var dataTarget = document.querySelector(dataID);
+
+            // If the menu has an '.active' class, remove it
+            if ( hasClass(dataTarget, 'active') ) {
+                removeClass(dataTarget, 'active');
+            }
+            // Otherwise, add the '.active' class
+            else {
+                addClass(dataTarget, 'active');
+            }
+            
+        }, false);
     });
-})(jQuery);
+}
