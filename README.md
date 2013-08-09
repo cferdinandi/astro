@@ -1,16 +1,19 @@
 # Astro
-Astro is a collection of five mobile-first navigation patterns. It's style-light so you can easily modify it to fit your design.
+Astro is a collection of five mobile-first navigation patterns. The "plus" version of each pattern includes an expand-and-collapse menu on small screens.
 
-Each pattern contains two small-screen variants:
-1. A simple version.
-2. A collapse-and-expand option toggled by a menu button.
-
-Pick the one that best fits your project.
+* Basic | Basic Plus. A centered navigation and logo.
+* Basic Left | Basic Left Plus. A left-aligned navigation and logo.
+* Navbar | Navbar Plus. An inline navigation and logo.
+* Navbar Left | Navbar Left Plus. An inline navigation and logo with left-aligned navigation.
+* Stacked | Stacked Plus. Stacked navigation and logo.
 
 ## How It Works
-Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/) or dig through the sample HTML files.
+Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/).
 
 ## Changelog
+* v3.0 (August 9, 2013)
+  * Rewritten in vanilla JS.
+  * Removed dependence on jQuery.
 * v2.0 (June 7, 2013)
   * Switched to MIT license.
 * v2.0 (June 5, 2013)
