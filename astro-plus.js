@@ -44,7 +44,7 @@ var removeClass = function (elem, className) {
     Toggle the navigation menu.
  * ============================================================= */
 
-// "Cut the Mustard" test
+// "Cut the Mustard" Feature Test
 if ( 'querySelector' in document && 'addEventListener' in window ) {
 
     // Get all '.nav-toggle' elements
