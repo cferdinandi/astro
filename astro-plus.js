@@ -38,6 +38,16 @@ var removeClass = function (elem, className) {
     }
 }
 
+// Toggle a class on an element
+var toggleClass = function (elem, className) {
+    if ( hasClass(elem, className) ) {
+        removeClass(elem, className);
+    }
+    else {
+        addClass(elem, className);
+    }
+}
+
 
 /* =============================================================
     ASTRO FUNCTIONS
@@ -63,14 +73,8 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
             var dataID = this.dataset.target;
             var dataTarget = document.querySelector(dataID);
 
-            // If the menu has an '.active' class, remove it
-            if ( hasClass(dataTarget, 'active') ) {
-                removeClass(dataTarget, 'active');
-            }
-            // Otherwise, add the '.active' class
-            else {
-                addClass(dataTarget, 'active');
-            }
+            // Toggle the '.active' class on the menu
+            toggleClass(dataTarget, 'active');
             
         }, false);
     });
