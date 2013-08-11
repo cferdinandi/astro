@@ -11,8 +11,8 @@
 
 
 /* =============================================================
-    CLASS HANDLERS
-    https://gist.github.com/cferdinandi/6146930
+    MICRO-FRAMEWORK
+    Simple vanilla JavaScript functions to handle common tasks.
  * ============================================================= */
 
 // Check if an element has a class
