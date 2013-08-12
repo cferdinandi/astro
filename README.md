@@ -11,6 +11,8 @@ Astro is a collection of five mobile-first navigation patterns. The "plus" versi
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/).
 
 ## Changelog
+* v3.1 (August 12, 2013)
+  * Fixed IE 9/10 bug.
 * v3.0 (August 9, 2013)
   * Rewritten in vanilla JS.
   * Removed dependence on jQuery.
