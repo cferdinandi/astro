@@ -1,6 +1,6 @@
 /* =============================================================
 
-    Astro v3.1
+    Astro v3.2
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
 
