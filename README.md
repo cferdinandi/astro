@@ -12,6 +12,7 @@ Getting started with Astro is pretty easy. [View the online tutorial](http://cfe
 
 ## Changelog
 * v3.3 (August 26, 2013)
+  * Converted to an IIFE pattern.
   * Added Buoy micro-library.
 * v3.2 (August 14,2013)
   * Added `toggleNav` function to make code more DRY.
