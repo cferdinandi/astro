@@ -11,6 +11,8 @@ Astro is a collection of five mobile-first navigation patterns. The "plus" versi
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/).
 
 ## Changelog
+* v3.3 (August 26, 2013)
+  * Added Buoy micro-library.
 * v3.2 (August 14,2013)
   * Added `toggleNav` function to make code more DRY.
 * v3.1 (August 12, 2013)
