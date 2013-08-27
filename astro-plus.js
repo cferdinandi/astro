@@ -1,6 +1,6 @@
 /* =============================================================
 
-    Astro v3.3
+    Astro v3.4
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -24,7 +24,7 @@
             // Toggle the '.active' class on the menu
             buoy.toggleClass(dataTarget, 'active');
 
-        }
+        };
 
         // Define the nav toggle
         var navToggle = document.querySelectorAll('.nav-toggle');

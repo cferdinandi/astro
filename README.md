@@ -11,6 +11,8 @@ Astro is a collection of five mobile-first navigation patterns. The "plus" versi
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/).
 
 ## Changelog
+* v3.4 (August 27, 2013)
+  * Added missing semicolon.
 * v3.3 (August 26, 2013)
   * Converted to an IIFE pattern.
   * Added Buoy micro-library.
