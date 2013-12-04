@@ -16,14 +16,14 @@
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: #272727;
-	margin-bottom: .470588235em;
+	color: $color-black;
+	margin-bottom: calc-em(8px);
 	text-decoration: none;
 }
 
 /*  For text-based logo, override default link hover styling */
 .logo:hover {
-	color: #272727;
+	color: $color-black;
 	text-decoration: none;
 }
 
@@ -39,8 +39,8 @@
 .nav > li {
 	display: inline-block;
 	float: none;
-	margin-left: .470588235em;
-	margin-right: .470588235em;
+	margin-left: calc-em(8px);
+	margin-right: calc-em(8px);
 }
 
 /*  Remove margin-left on first navigation item */
@@ -69,18 +69,16 @@
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 
 	.nav li {
 		display: block;
 		width: 100%;
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-		        box-sizing: border-box;
+		@include prefixer( box-sizing, border-box, webkit moz spec );
 		margin-left: 0;
 		margin-right: 0;
-		padding-top: .235294118em;
-		padding-bottom: .235294118em;
+		padding-top: calc-em(4px);
+		padding-bottom: calc-em(4px);
 	}
 
 }

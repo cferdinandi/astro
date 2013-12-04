@@ -16,14 +16,14 @@
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: #272727;
-	margin-bottom: .470588235em;
+	color: $color-black;
+	margin-bottom: calc-em(8px);
 	text-decoration: none;
 }
 
 /*  For text-based logo, override default link hover styling */
 .logo:hover {
-	color: #272727;
+	color: $color-black;
 	text-decoration: none;
 }
 
@@ -39,8 +39,8 @@
 .nav > li {
 	display: inline-block;
 	float: none;
-	margin-left: .470588235em;
-	margin-right: .470588235em;
+	margin-left: calc-em(8px);
+	margin-right: calc-em(8px);
 }
 
 /*  Remove margin-left on first navigation item */

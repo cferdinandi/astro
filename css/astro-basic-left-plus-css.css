@@ -16,7 +16,7 @@
   font-size: 1.2em;
   line-height: 1.2;
   color: #272727;
-  margin-bottom: .470588235em;
+  margin-bottom: 0.5em;
   text-decoration: none;
 }
 
@@ -38,8 +38,8 @@
 .nav > li {
   display: inline-block;
   float: none;
-  margin-left: .470588235em;
-  margin-right: .470588235em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 /*  Remove margin-left on first navigation item */
@@ -92,7 +92,7 @@
    *  Uses max-height instead of display: none to allow for
    *  CSS3 animations, which don't work on display values. */
   .js .nav-collapse.active {
-    max-height: 600em;
+    max-height: 999em;
   }
 
   /*  Display navigation items as full-width, stacked blocks when javascript supported */
@@ -104,7 +104,7 @@
     box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
-    padding-top: .235294118em;
-    padding-bottom: .235294118em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
 }
