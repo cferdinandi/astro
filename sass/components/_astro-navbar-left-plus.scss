@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Navbar Plus 3.4
+	Astro Navbar Left Plus 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -150,15 +150,13 @@
 		text-align: left;
 	}
 
-	/*  Float logo to the left and remove margin-bottom */
+	/*  Float logo to the left, display as inline-block, and adjust margins */
 	.logo {
+		display: inline-block;
 		float: left;
+		margin-right: .470588235em;
 	}
 
-	/*  Align navigation elements to the right */
-	.nav {
-		text-align: right;
-	}
 }
 
 

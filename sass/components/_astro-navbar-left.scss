@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Basic Left Plus 3.4
+	Astro Navbar Left 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -8,6 +8,11 @@
 	http://gomakethings.com/mit/
 
  * ============================================================= */
+
+/*  Center all navigation elements */
+.nav-wrap {
+	text-align: center;
+}
 
 /*  For text-based logo, override default link styling.
  *  If .logo and .nav don't align properly,
@@ -66,51 +71,34 @@
 }
 
 
-/*  Expand-and-Collapse styling for smaller screens.
- *  Remove if not using.
- *  Change max-width to fit your project. */
-@media (max-width: 40em) {
+/*  Styling for Bigger Screens.
+ *  (Astro is built mobile-first.)
+ *  Change min-width to fit your project. */
+@media (min-width: 40em) {
 
-	/*  .js prefix ensure content is only hidden when JavaScript is supported.
-	 *  This requires on the included js-accessibility.js script. */
-
-	/*  Display navigation toggle button if javascript is supported */
-	.js .nav-toggle {
-		display: block;
-		visibility: visible;
-		float: right;
+	/*  Align text to the left */
+	.nav-wrap {
+		text-align: left;
 	}
 
-	/*  Hide navigation items if javascript is supported */
-	.js .nav-collapse {
-		max-height: 0;
-		overflow: hidden;
-		/*  CSS3 animation for when menu content expands */
-		-webkit-transition: all 0.35s ease-in;
-		   -moz-transition: all 0.35s ease-in;
-		    -ms-transition: all 0.35s ease-in;
-		     -o-transition: all 0.35s ease-in;
-		        transition: all 0.35s ease-in;
+	/*  Float logo to the left, display as inline-block, and adjust margins */
+	.logo {
+		display: inline-block;
+		float: left;
+		margin-right: .470588235em;
 	}
 
-	/*  When collapsed element has the .active class, show it
-	 *  Uses max-height instead of display: none to allow for
-	 *  CSS3 animations, which don't work on display values. */
-	.js .nav-collapse.active {
-		max-height: 600em;
-	}
+}
 
-	/*  Display navigation items as full-width, stacked blocks when javascript supported */
-	.js .nav-collapse li {
-		display: block;
-		width: 100%;
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-		        box-sizing: border-box;
-		margin-left: 0;
-		margin-right: 0;
-		padding-top: .235294118em;
-		padding-bottom: .235294118em;
-	}
 
+/*  Clearfix */
+
+.nav-wrap:before, .nav-wrap:after {
+	display: table;
+	content: "";
+	*zoom: 1;
+}
+
+.nav-wrap:after {
+	clear: both;
 }

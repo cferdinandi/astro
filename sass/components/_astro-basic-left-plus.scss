@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Stacked Plus 3.4
+	Astro Basic Left Plus 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -88,9 +88,9 @@
 		/*  CSS3 animation for when menu content expands */
 		-webkit-transition: all 0.35s ease-in;
 		   -moz-transition: all 0.35s ease-in;
-			-ms-transition: all 0.35s ease-in;
-			 -o-transition: all 0.35s ease-in;
-				transition: all 0.35s ease-in;
+		    -ms-transition: all 0.35s ease-in;
+		     -o-transition: all 0.35s ease-in;
+		        transition: all 0.35s ease-in;
 	}
 
 	/*  When collapsed element has the .active class, show it
@@ -102,26 +102,6 @@
 
 	/*  Display navigation items as full-width, stacked blocks when javascript supported */
 	.js .nav-collapse li {
-		display: block;
-		width: 100%;
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-		        box-sizing: border-box;
-		margin-left: 0;
-		margin-right: 0;
-		padding-top: .235294118em;
-		padding-bottom: .235294118em;
-	}
-
-}
-
-
-/*  Styling for Bigger Screens.
- *  (Astro is built mobile-first.)
- *  Change min-width to fit your project. */
-@media (min-width: 40em) {
-
-	.nav li {
 		display: block;
 		width: 100%;
 		-webkit-box-sizing: border-box;

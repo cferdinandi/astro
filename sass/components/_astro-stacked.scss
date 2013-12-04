@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Navbar 3.4
+	Astro Stacked 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -8,11 +8,6 @@
 	http://gomakethings.com/mit/
 
  * ============================================================= */
-
-/*  Center all navigation elements */
-.nav-wrap {
-	text-align: center;
-}
 
 /*  For text-based logo, override default link styling.
  *  If .logo and .nav don't align properly,
@@ -76,31 +71,16 @@
  *  Change min-width to fit your project. */
 @media (min-width: 40em) {
 
-	/*  Align text to the left */
-	.nav-wrap {
-		text-align: left;
+	.nav li {
+		display: block;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: .235294118em;
+		padding-bottom: .235294118em;
 	}
 
-	/*  Float logo to the left and remove margin-bottom */
-	.logo {
-		float: left;
-	}
-
-	/*  Align navigation elements to the right */
-	.nav {
-		text-align: right;
-	}
-}
-
-
-/*  Clearfix */
-
-.nav-wrap:before, .nav-wrap:after {
-	display: table;
-	content: "";
-	*zoom: 1;
-}
-
-.nav-wrap:after {
-	clear: both;
 }
