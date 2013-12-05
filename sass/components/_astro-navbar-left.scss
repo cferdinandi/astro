@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Basic 3.4
+	Astro Navbar Left 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -21,14 +21,14 @@
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: #272727;
-	margin-bottom: .470588235em;
+	color: $color-black;
+	margin-bottom: calc-em(8px);
 	text-decoration: none;
 }
 
 /*  For text-based logo, override default link hover styling */
 .logo:hover {
-	color: #272727;
+	color: $color-black;
 	text-decoration: none;
 }
 
@@ -44,8 +44,8 @@
 .nav > li {
 	display: inline-block;
 	float: none;
-	margin-left: .470588235em;
-	margin-right: .470588235em;
+	margin-left: calc-em(8px);
+	margin-right: calc-em(8px);
 }
 
 /*  Remove margin-left on first navigation item */
@@ -68,4 +68,36 @@
 .nav-toggle {
 	display: none;
 	visibility: hidden;
+}
+
+
+/*  Styling for Bigger Screens.
+ *  (Astro is built mobile-first.)
+ *  Change min-width to fit your project. */
+@media (min-width: $bp-medium) {
+
+	/*  Align text to the left */
+	.nav-wrap {
+		text-align: left;
+	}
+
+	/*  Float logo to the left, display as inline-block, and adjust margins */
+	.logo {
+		display: inline-block;
+		float: left;
+		margin-right: calc-em(8px);
+	}
+
+}
+
+
+/*  Clearfix */
+.nav-wrap:before, .nav-wrap:after {
+	display: table;
+	content: "";
+	*zoom: 1;
+}
+
+.nav-wrap:after {
+	clear: both;
 }

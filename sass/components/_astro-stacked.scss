@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Navbar 3.4
+	Astro Stacked 3.5
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -9,11 +9,6 @@
 
  * ============================================================= */
 
-/*  Center all navigation elements */
-.nav-wrap {
-	text-align: center;
-}
-
 /*  For text-based logo, override default link styling.
  *  If .logo and .nav don't align properly,
  *  adjust the .logo line-height. */
@@ -21,14 +16,14 @@
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: #272727;
-	margin-bottom: .470588235em;
+	color: $color-black;
+	margin-bottom: calc-em(8px);
 	text-decoration: none;
 }
 
 /*  For text-based logo, override default link hover styling */
 .logo:hover {
-	color: #272727;
+	color: $color-black;
 	text-decoration: none;
 }
 
@@ -44,8 +39,8 @@
 .nav > li {
 	display: inline-block;
 	float: none;
-	margin-left: .470588235em;
-	margin-right: .470588235em;
+	margin-left: calc-em(8px);
+	margin-right: calc-em(8px);
 }
 
 /*  Remove margin-left on first navigation item */
@@ -74,33 +69,16 @@
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 
-	/*  Align text to the left */
-	.nav-wrap {
-		text-align: left;
+	.nav li {
+		display: block;
+		width: 100%;
+		@include prefixer( box-sizing, border-box, webkit moz spec );
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: calc-em(4px);
+		padding-bottom: calc-em(4px);
 	}
 
-	/*  Float logo to the left and remove margin-bottom */
-	.logo {
-		float: left;
-	}
-
-	/*  Align navigation elements to the right */
-	.nav {
-		text-align: right;
-	}
-}
-
-
-/*  Clearfix */
-
-.nav-wrap:before, .nav-wrap:after {
-	display: table;
-	content: "";
-	*zoom: 1;
-}
-
-.nav-wrap:after {
-	clear: both;
 }
