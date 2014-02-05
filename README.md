@@ -11,6 +11,11 @@ Astro is a collection of five mobile-first navigation patterns. The "plus" versi
 Getting started with Astro is pretty easy. [View the online tutorial](http://cferdinandi.github.com/astro/).
 
 ## Changelog
+* v3.6 (February 5, 2014)
+  * Switched to a data attribute for the toggle selector (separates scripts from styles).
+  * Added namespacing to IIFE.
+  * Moved feature test to script itself for better progressive enhancement.
+  * Updated looping method.
 * v3.5 (December 4, 2013)
   * Added Sass support.
 * v3.4 (August 27, 2013)

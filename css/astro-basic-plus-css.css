@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Basic Plus 3.5
+	Astro Basic Plus 3.6
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -72,16 +72,16 @@
  *  Remove if not using.
  *  Change max-width to fit your project. */
 @media (max-width: 40em) {
-  /*  .js prefix ensure content is only hidden when JavaScript is supported.
-   *  This requires on the included js-accessibility.js script. */
+  /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
+   *  This requires on the included js-accessibility.js-astro script. */
   /*  Display navigation toggle button if javascript is supported */
-  .js .nav-toggle {
+  .js-astro .nav-toggle {
     display: block;
     visibility: visible;
   }
 
   /*  Hide navigation items if javascript is supported */
-  .js .nav-collapse {
+  .js-astro .nav-collapse {
     max-height: 0;
     overflow: hidden;
     /*  CSS3 animation for when menu content expands */
@@ -95,12 +95,12 @@
   /*  When collapsed element has the .active class, show it
    *  Uses max-height instead of display: none to allow for
    *  CSS3 animations, which don't work on display values. */
-  .js .nav-collapse.active {
+  .js-astro .nav-collapse.active {
     max-height: 999em;
   }
 
   /*  Display navigation items as full-width, stacked blocks when javascript supported */
-  .js .nav-collapse li {
+  .js-astro .nav-collapse li {
     display: block;
     width: 100%;
     -webkit-box-sizing: border-box;
