@@ -137,6 +137,12 @@ astro.toggleNav(
 );
 ```
 
+**Example**
+
+```javascript
+astro.toggleNav( null, '#nav-menu' );
+```
+
 
 ## Browser Compatibility
 
