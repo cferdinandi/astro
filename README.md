@@ -16,9 +16,10 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 3. [Active Link Styling](#active-link-styling)
 4. [Options & Settings](#options-and-settings)
 5. [Browser Compatibility](#browser-compatibility)
-6. [License](#license)
-7. [Changelog](#changelog)
-8. [Older Docs](#older-docs)
+6. [How to Contribute](#how-to-contribute)
+7. [License](#license)
+8. [Changelog](#changelog)
+9. [Older Docs](#older-docs)
 
 
 
@@ -149,6 +150,12 @@ astro.toggleNav( null, '#nav-menu' );
 Astro works in all modern browsers, and IE 9 and above.
 
 Astro is built with modern JavaScript APIs, and uses progressive enhancement. If the JavaScript file fails to load, or if your site is viewed on older and less capable browsers, the Basic navigation patterns will be displayed instead of the Plus versions.
+
+
+
+## How to Contribute
+
+In lieu of a formal style guide, take care to maintain the existing coding style. Don't forget to update the version number, the changelog (in the `readme.md` file), and when applicable, the documentation.
 
 
 
