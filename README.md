@@ -119,8 +119,8 @@ astro.init({
 	toggleActiveClass: 'active', // Class added to active dropdown toggles on small screens
 	navActiveClass: 'active', // Class added to active dropdown content areas on small screens
 	initClass: 'js-astro', // Class added to `<html>` element when initiated
-	callbackBefore: function () {}, // Function that's run before a dropdown is toggled
-	callbackAfter: function () {} // Function that's run after a dropdown is toggled
+	callbackBefore: function ( toggle, navID ) {}, // Function that's run before a dropdown is toggled
+	callbackAfter: function ( toggle, navID ) {} // Function that's run after a dropdown is toggled
 });
 ```
 
