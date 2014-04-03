@@ -49,6 +49,7 @@
 		}
 
 		options.callbackBefore( toggle, navID ); // Run callbacks before toggling nav
+		buoy.toggleClass(toggle, options.toggleActiveClass); // Toggle the '.active' class on the toggle element
 		buoy.toggleClass(nav, options.navActiveClass); // Toggle the '.active' class on the menu
 		options.callbackBefore( toggle, navID ); // Run callbacks after toggling nav
 
@@ -72,6 +73,8 @@
 			Array.prototype.forEach.call(navToggle, function (toggle) {
 				toggle.addEventListener('click', toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), options ), false);
 			});
+
+			console.log(navToggle);
 
 		}
 
