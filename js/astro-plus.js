@@ -74,8 +74,6 @@
 				toggle.addEventListener('click', toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), options ), false);
 			});
 
-			console.log(navToggle);
-
 		}
 
 	};
