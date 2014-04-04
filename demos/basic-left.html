@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Astro</title>
+	<title>Basic Left | Astro</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- A basic responsive reset -->
@@ -27,7 +27,7 @@
 	</style>
 
 	<!-- stylesheets -->
-	<link rel="stylesheet" href="css/astro-navbar-plus-css.css" type="text/css">
+	<link rel="stylesheet" href="../css/astro-basic-left-plus-css.css" type="text/css">
 
 	<!-- HTML5 Shim for IE -->
 	<!--[if IE]>
@@ -38,27 +38,30 @@
 <body>
 	<section class="container">
 
-		<h1 style="text-align: center; font-size: 3em; margin-bottom: 0;;">Astro</h1>
+		<h1 style="text-align: center; font-size: 3em; margin-bottom: 0;">Astro</h1>
 		<p style="text-align: center; font-size: 1.5em; margin: 0;">Mobile-First Navigation Patterns</p>
-		<p style="text-align: center;"><a href="https://github.com/cferdinandi/astro#readme">Astro on GitHub</a></p>
+		<p style="text-align: center;"><a href="../index.html">&larr; Back</a></p>
 
-		<nav>
-			<h2>Demos</h2>
-			<ul>
-				<li><a href="demos/basic.html">Basic</a></li>
-				<li><a href="demos/basic-left.html">Basic Left</a></li>
-				<li><a href="demos/navbar.html">Navbar</a></li>
-				<li><a href="demos/navbar-left.html">Navbar Left</a></li>
-				<li><a href="demos/stacked.html">Stacked</a></li>
-			</ul>
+		<br><br>
+
+		<nav class="nav-wrap">
+			<a class="logo" href="#">Astro Basic Left</a>
+			<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">Menu</a>
+			<div class="nav-collapse" id="nav-menu">
+				<ul class="nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
 		</nav>
 
 	</section>
 
 
 	<!-- Javascript -->
-	<script src="js/buoy.js"></script>
-	<script src="js/astro-plus.js"></script>
+	<script src="../js/buoy.js"></script>
+	<script src="../js/astro-plus.js"></script>
 	<script>
 		astro.init({
 			toggleActiveClass: 'active',
