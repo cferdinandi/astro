@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Astro Basic Plus 4.1
+	Astro Basic Plus v5.0
 	Mobile-first navigation patterns by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -86,9 +86,6 @@
     overflow: hidden;
     /*  CSS3 animation for when menu content expands */
     -webkit-transition: all 0.35s ease-in;
-    -moz-transition: all 0.35s ease-in;
-    -ms-transition: all 0.35s ease-in;
-    -o-transition: all 0.35s ease-in;
     transition: all 0.35s ease-in;
   }
 

@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16828",
+"creatorBuild": "16877",
 "files": {
 	"\/css\/astro-basic-css.css": {
 		"fileType": 16,
@@ -92,8 +92,8 @@
 		},
 	"\/js\/astro-plus.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/astro-plus.js",
 		"outputAbbreviatedPath": "\/js\/min\/astro-plus.min.js",
 		"outputPathIsSetByUser": 0,
@@ -102,8 +102,8 @@
 		},
 	"\/js\/buoy.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/buoy.js",
 		"outputAbbreviatedPath": "\/js\/min\/buoy.min.js",
 		"outputPathIsSetByUser": 0,
@@ -115,8 +115,8 @@
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsSetByUser": 0
