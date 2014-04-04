@@ -166,6 +166,8 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.0 - April 3, 2014
+	* Converted from Buoy class helpers to `classList` with polyfill.
 * v4.1 - February 27, 2014
 	* Converted `_defaults` to a literal object
 * v4.0 - February 24, 2014
@@ -210,4 +212,5 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Older Docs
 
+* [Version 4](https://github.com/cferdinandi/astro/tree/archive-v4)
 * [Version 3](http://cferdinandi.github.io/astro/archive/v3/)
