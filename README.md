@@ -7,7 +7,7 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 * **Navbar Left | Navbar Left Plus.** An inline navigation and logo with left-aligned navigation.
 * **Stacked | Stacked Plus.** Stacked navigation and logo.
 
-[View the demo](http://cferdinandi.github.io/astro/)
+[Download Astro 5](https://github.com/cferdinandi/astro/archive/master.zip) / [View the demo](http://cferdinandi.github.io/astro/)
 
 **In This Documentation**
 
