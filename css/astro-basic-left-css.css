@@ -1,13 +1,13 @@
-/* =============================================================
-
-	Astro Basic Left v5.0
-	Mobile-first navigation patterns by Chris Ferdinandi.
-	http://gomakethings.com
-
-	Free to use under the MIT License.
-	http://gomakethings.com/mit/
-
- * ============================================================= */
+/**
+ *
+ * Astro Basic Left v5.1.0
+ * Mobile-first navigation patterns by Chris Ferdinandi.
+ * http://github.com/cferdinandi/astro
+ *
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ *
+ */
 /*  For text-based logo, override default link styling.
  *  If .logo and .nav don't align properly,
  *  adjust the .logo line-height. */
