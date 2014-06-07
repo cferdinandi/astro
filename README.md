@@ -89,9 +89,9 @@ If you're using a Plus version, initialize Astro in the footer of your page, aft
 
 You can install Smooth Scroll with your favorite package manager.
 
-* **NPM:** `npm install cferdinandi/smooth-scroll`
-* **Bower:** `bower install https://github.com/cferdinandi/smooth-scroll.git`
-* **Component:** `component install install cferdinandi/smooth-scroll`
+* **NPM:** `npm install cferdinandi/astro`
+* **Bower:** `bower install https://github.com/cferdinandi/astro.git`
+* **Component:** `component install install cferdinandi/astro`
 
 
 
