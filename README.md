@@ -87,7 +87,7 @@ If you're using a Plus version, initialize Astro in the footer of your page, aft
 
 ## Installing with Package Managers
 
-You can install Smooth Scroll with your favorite package manager.
+You can install Astro with your favorite package manager.
 
 * **NPM:** `npm install cferdinandi/astro`
 * **Bower:** `bower install https://github.com/cferdinandi/astro.git`
