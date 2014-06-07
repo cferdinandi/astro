@@ -12,14 +12,15 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 **In This Documentation**
 
 1. [Getting Started](#getting-started)
-2. [Using Multiple Patterns](#using-multiple-patterns)
-3. [Active Link Styling](#active-link-styling)
-4. [Options & Settings](#options-and-settings)
-5. [Browser Compatibility](#browser-compatibility)
-6. [How to Contribute](#how-to-contribute)
-7. [License](#license)
-8. [Changelog](#changelog)
-9. [Older Docs](#older-docs)
+2. [Installing with Package Managers](#installing-with-package-managers)
+3. [Using Multiple Patterns](#using-multiple-patterns)
+4. [Active Link Styling](#active-link-styling)
+5. [Options & Settings](#options-and-settings)
+6. [Browser Compatibility](#browser-compatibility)
+7. [How to Contribute](#how-to-contribute)
+8. [License](#license)
+9. [Changelog](#changelog)
+10. [Older Docs](#older-docs)
 
 
 
@@ -30,15 +31,15 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 ```html
 <!-- Replace the * with your chosen version of Astro -->
 <link rel="stylesheet" href="css/astro-*-css.css">
+<script src="classList.js"></script>
 <script src="js/astro-plus.js"></script>
-<script src="buoy.js"></script>
 ```
 
 Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
 
 The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
 
-Plus versions of Astro require `astro-plus.js`, and [Buoy](http://cferdinandi.github.io/buoy/), a simple `classList` polyfill that makes working with classes in vanilla JS a little bit easier. Basic versions can omit both of these files.
+Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js), a `classList` polyfill that extends `classList` support back to IE8. Basic versions can omit both of these files.
 
 ### 2. Add the markup to your HTML.
 
@@ -81,6 +82,16 @@ All five navigation patterns use the same markup structure, though the markup va
 ```
 
 If you're using a Plus version, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
+
+
+
+## Installing with Package Managers
+
+You can install Smooth Scroll with your favorite package manager.
+
+* **NPM:** `npm install cferdinandi/smooth-scroll`
+* **Bower:** `bower install https://github.com/cferdinandi/smooth-scroll.git`
+* **Component:** `component install install cferdinandi/smooth-scroll`
 
 
 
@@ -167,6 +178,17 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.1.0 - June 6, 2014
+	* Converted to UMD module.
+	* Replaced Buoy with classList.js polyfill.
+	* Moved public APIs to exports variable.
+	* Improved feature test.
+	* Replaced Array.prototype.forEach hack with proper forEach function.
+	* Added a more well supported trim function.
+	* General code optimizations for better minification and performance.
+	* Updated to JSDoc documentation (sort of).
+	* Updated to three number versioning system.
+	* Added package manager installation info.
 * v5.0 - April 3, 2014
 	* Converted from Buoy class helpers to `classList` with polyfill.
 * v4.1 - February 27, 2014
