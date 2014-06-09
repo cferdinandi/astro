@@ -95,7 +95,7 @@
 
 
 		// If a link, prevent default click event
-		if ( toggle && toggle.tagName === 'A' && event ) {
+		if ( toggle && toggle.tagName.toLowerCase() === 'a' && event ) {
 			event.preventDefault();
 		}
 
