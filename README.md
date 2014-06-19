@@ -91,7 +91,7 @@ You can install Astro with your favorite package manager.
 
 * **NPM:** `npm install cferdinandi/astro`
 * **Bower:** `bower install https://github.com/cferdinandi/astro.git`
-* **Component:** `component install install cferdinandi/astro`
+* **Component:** `component install cferdinandi/astro`
 
 
 
@@ -178,6 +178,8 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.1.1 - June 19, 2014
+	* Fixed factory/root/UMD definition.
 * v5.1.0 - June 6, 2014
 	* Converted to UMD module.
 	* Replaced Buoy with classList.js polyfill.
