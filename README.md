@@ -1,4 +1,4 @@
-# Astro
+# Astro [![Build Status](https://travis-ci.org/cferdinandi/astro.svg)](https://travis-ci.org/cferdinandi/astro)
 A collection of five mobile-first navigation patterns. The "plus" version of each pattern includes an expand-and-collapse menu on small screens.
 
 * **Basic | Basic Plus.** A centered navigation and logo.
@@ -26,20 +26,22 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 
 ## Getting Started
 
+Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code. Unit tests are located in the `test` directory.
+
 ### 1. Include Astro on your site.
 
 ```html
 <!-- Replace the * with your chosen version of Astro -->
-<link rel="stylesheet" href="css/astro-*-css.css">
-<script src="classList.js"></script>
-<script src="js/astro-plus.js"></script>
+<link rel="stylesheet" href="dist/css/astro-*-css.css">
+<script src="dist/js/classList.js"></script>
+<script src="dist/js/astro-plus.js"></script>
 ```
 
 Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
 
 The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
 
-Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js), a `classList` polyfill that extends `classList` support back to IE8. Basic versions can omit both of these files.
+Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js), a polyfill that extends `classList` support back to IE8. Basic versions can omit both of these files.
 
 ### 2. Add the markup to your HTML.
 
@@ -97,7 +99,7 @@ You can install Astro with your favorite package manager.
 
 ## Using Multiple Patterns
 
-For simpicity, each navigation pattern uses the same naming conventions. If you will be using more than one pattern on a project, you'll need to change the class names to avoid conflicts.
+For simplicity, each navigation pattern uses the same naming conventions. If you will be using more than one pattern on a project, you'll need to change the class names to avoid conflicts.
 
 For example, if you were combining Astro Basic and Astro Stacked, you might rename `.nav` to `.nav-basic` and `.nav-stacked`, respectively.
 
@@ -178,6 +180,12 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.2.1 - June 19, 2014
+	* Converted to gulp.js workflow.
+	* Added unit testing.
+	* Updated naming conventions.
+	* Removed unused `_mixins.scss` file.
+	* Added minified versions of files.
 * v5.1.1 - June 19, 2014
 	* Fixed factory/root/UMD definition.
 * v5.1.0 - June 6, 2014
