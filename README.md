@@ -180,6 +180,8 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.2.2 - June 28, 2014
+	* Fixed `extend()` function.
 * v5.2.1 - June 19, 2014
 	* Converted to gulp.js workflow.
 	* Added unit testing.

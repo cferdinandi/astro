@@ -1,5 +1,5 @@
 /**
- * Astro v5.2.1
+ * Astro v5.2.2
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -25,6 +25,7 @@
 
 	var exports = {}; // Object for public APIs
 	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
+	var settings;
 
 	// Default settings
 	var defaults = {
@@ -39,22 +40,6 @@
 	//
 	// Methods
 	//
-
-	/**
-	 * Merge defaults with user options
-	 * @private
-	 * @param {Object} defaults Default settings
-	 * @param {Object} options User options
-	 * @returns {Object} Merged values of defaults and options
-	 */
-	var extend = function ( defaults, options ) {
-		for ( var key in options ) {
-			if (Object.prototype.hasOwnProperty.call(options, key)) {
-				defaults[key] = options[key];
-			}
-		}
-		return defaults;
-	};
 
 	/**
 	 * A simple forEach() implementation for Arrays, Objects and NodeLists
@@ -78,6 +63,24 @@
 	};
 
 	/**
+	 * Merge defaults with user options
+	 * @private
+	 * @param {Object} defaults Default settings
+	 * @param {Object} options User options
+	 * @returns {Object} Merged values of defaults and options
+	 */
+	var extend = function ( defaults, options ) {
+		var extended = {};
+		forEach(defaults, function (value, prop) {
+			extended[prop] = defaults[prop];
+		});
+		forEach(options, function (value, prop) {
+			extended[prop] = options[prop];
+		});
+		return extended;
+	};
+
+	/**
 	 * Show and hide navigation menu
 	 * @public
 	 * @param  {Element} toggle Element that triggered the toggle
@@ -85,10 +88,10 @@
 	 * @param  {Object} settings
 	 * @param  {Event} event
 	 */
-	exports.toggleNav = function ( toggle, navID, settings, event ) {
+	exports.toggleNav = function ( toggle, navID, options, event ) {
 
 		// Selectors and variables
-		settings = extend( defaults, settings || {} ); // Merge user options with defaults
+		var settings = extend( settings || defaults, options || {} );  // Merge user options with defaults
 		var nav = document.querySelector(navID);
 
 
@@ -115,14 +118,14 @@
 		if ( !supports ) return;
 
 		// Selectors and variables
-		options = extend( defaults, options || {} ); // Merge user options with defaults
+		settings = extend( defaults, options || {} ); // Merge user options with defaults
 		var navToggle = document.querySelectorAll('[data-nav-toggle]'); // Get all nav toggles
 
 		document.documentElement.classList.add( options.initClass ); // Add class to HTML element to activate conditional CSS
 
 		// When a nav toggle is clicked, show or hide the nav
 		forEach(navToggle, function (toggle) {
-			toggle.addEventListener('click', exports.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), options ), false);
+			toggle.addEventListener('click', exports.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings ), false);
 		});
 
 	};
