@@ -16,7 +16,8 @@
 
 	var exports = {}; // Object for public APIs
 	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
-	var settings;
+	var eventListeners = []; //Listeners array
+	var settings, toggles;
 
 	// Default settings
 	var defaults = {
@@ -94,8 +95,25 @@
 		settings.callbackBefore( toggle, navID ); // Run callbacks before toggling nav
 		toggle.classList.toggle( settings.toggleActiveClass ); // Toggle the '.active' class on the toggle element
 		nav.classList.toggle( settings.navActiveClass ); // Toggle the '.active' class on the menu
-		settings.callbackBefore( toggle, navID ); // Run callbacks after toggling nav
+		settings.callbackAfter( toggle, navID ); // Run callbacks after toggling nav
 
+	};
+
+	/**
+	 * Destroy the current initialization.
+	 * @public
+	 */
+	exports.destroy = function () {
+		if ( !settings ) return;
+		document.documentElement.classList.remove( settings.initClass );
+		if ( toggles ) {
+			forEach( toggles, function ( toggle, index ) {
+				toggle.removeEventListener( 'click', eventListeners[index], false );
+			});
+			eventListeners = [];
+		}
+		settings = null;
+		toggles = null;
 	};
 
 	/**
@@ -108,15 +126,19 @@
 		// feature test
 		if ( !supports ) return;
 
+		// Destroy any existing initializations
+		exports.destroy();
+
 		// Selectors and variables
 		settings = extend( defaults, options || {} ); // Merge user options with defaults
-		var navToggle = document.querySelectorAll('[data-nav-toggle]'); // Get all nav toggles
+		toggles = document.querySelectorAll('[data-nav-toggle]'); // Get all nav toggles
 
-		document.documentElement.classList.add( options.initClass ); // Add class to HTML element to activate conditional CSS
+		document.documentElement.classList.add( settings.initClass ); // Add class to HTML element to activate conditional CSS
 
 		// When a nav toggle is clicked, show or hide the nav
-		forEach(navToggle, function (toggle) {
-			toggle.addEventListener('click', exports.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings ), false);
+		forEach(toggles, function (toggle, index) {
+			eventListeners[index] = exports.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings );
+			toggle.addEventListener('click', eventListeners[index], false);
 		});
 
 	};
