@@ -140,7 +140,10 @@ astro.init({
 
 ### Use Astro events in your own scripts
 
-You can also call Astro's navigation toggle event in your own scripts:
+You can also call Astro's navigation toggle event in your own scripts.
+
+#### toggleNav()
+Expand or collapse a navigation menu.
 
 ```javascript
 astro.toggleNav(
@@ -155,6 +158,13 @@ astro.toggleNav(
 
 ```javascript
 astro.toggleNav( null, '#nav-menu' );
+```
+
+#### destroy()
+Destroy the current `astro.init()`.
+
+```javascript
+astro.destroy();
 ```
 
 
@@ -180,6 +190,9 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.3.0 - June 28, 2014
+	* Added a `destroy()` method.
+	* Updated unit tests.
 * v5.2.2 - June 28, 2014
 	* Fixed `extend()` function.
 * v5.2.1 - June 19, 2014
