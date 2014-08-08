@@ -1,5 +1,5 @@
 /**
- * Astro v6.3.0
+ * Astro v5.3.1
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 

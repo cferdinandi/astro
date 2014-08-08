@@ -34,6 +34,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 <!-- Replace the * with your chosen version of Astro -->
 <link rel="stylesheet" href="dist/css/astro-*-css.css">
 <script src="dist/js/classList.js"></script>
+<script src="dist/js/bind-polyfill.js"></script>
 <script src="dist/js/astro-plus.js"></script>
 ```
 
@@ -41,7 +42,7 @@ Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you
 
 The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
 
-Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js), a polyfill that extends `classList` support back to IE8. Basic versions can omit both of these files.
+Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js) and `bind-polyfill.js`, polyfills that extend ECMAScript 5 API support to more browsers. Basic versions can omit these files.
 
 ### 2. Add the markup to your HTML.
 
@@ -190,6 +191,9 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v5.3.1 - August 8, 2014
+	* Added polyfill for `Functions.prototype.bind`.
+	* Removed Sass paths from `gulpfile.js`.
 * v5.3.0 - June 28, 2014
 	* Added a `destroy()` method.
 	* Updated unit tests.
