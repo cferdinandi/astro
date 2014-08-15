@@ -1,5 +1,5 @@
 /**
- * Astro v5.3.1
+ * Astro v5.3.2
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -23,7 +23,7 @@
 	// Variables
 	//
 
-	var exports = {}; // Object for public APIs
+	var astro = {}; // Object for public APIs
 	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
 	var eventListeners = []; //Listeners array
 	var settings, toggles;
@@ -89,7 +89,7 @@
 	 * @param  {Object} settings
 	 * @param  {Event} event
 	 */
-	exports.toggleNav = function ( toggle, navID, options, event ) {
+	astro.toggleNav = function ( toggle, navID, options, event ) {
 
 		// Selectors and variables
 		var settings = extend( settings || defaults, options || {} );  // Merge user options with defaults
@@ -112,7 +112,7 @@
 	 * Destroy the current initialization.
 	 * @public
 	 */
-	exports.destroy = function () {
+	astro.destroy = function () {
 		if ( !settings ) return;
 		document.documentElement.classList.remove( settings.initClass );
 		if ( toggles ) {
@@ -130,13 +130,13 @@
 	 * @public
 	 * @param {Object} options User settings
 	 */
-	exports.init = function ( options ) {
+	astro.init = function ( options ) {
 
 		// feature test
 		if ( !supports ) return;
 
 		// Destroy any existing initializations
-		exports.destroy();
+		astro.destroy();
 
 		// Selectors and variables
 		settings = extend( defaults, options || {} ); // Merge user options with defaults
@@ -146,7 +146,7 @@
 
 		// When a nav toggle is clicked, show or hide the nav
 		forEach(toggles, function (toggle, index) {
-			eventListeners[index] = exports.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings );
+			eventListeners[index] = astro.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings );
 			toggle.addEventListener('click', eventListeners[index], false);
 		});
 
@@ -157,6 +157,6 @@
 	// Public APIs
 	//
 
-	return exports;
+	return astro;
 
 });
