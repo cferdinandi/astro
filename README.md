@@ -191,6 +191,8 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+Astro uses [semantic versioning](http://semver.org/).
+
 * v5.3.2 - August 15, 2014
 	* Updated UMD pattern to fix a few bugs.
 * v5.3.1 - August 8, 2014
