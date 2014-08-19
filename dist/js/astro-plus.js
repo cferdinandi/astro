@@ -25,8 +25,7 @@
 
 	var astro = {}; // Object for public APIs
 	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
-	var eventListeners = []; //Listeners array
-	var settings, toggles;
+	var settings;
 
 	// Default settings
 	var defaults = {
