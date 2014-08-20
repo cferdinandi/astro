@@ -16,8 +16,7 @@
 
 	var astro = {}; // Object for public APIs
 	var supports = !!document.querySelector && !!root.addEventListener; // Feature test
-	var eventListeners = []; //Listeners array
-	var settings, toggles;
+	var settings;
 
 	// Default settings
 	var defaults = {
@@ -86,17 +85,27 @@
 		var settings = extend( settings || defaults, options || {} );  // Merge user options with defaults
 		var nav = document.querySelector(navID);
 
-
-		// If a link, prevent default click event
-		if ( toggle && toggle.tagName.toLowerCase() === 'a' && event ) {
-			event.preventDefault();
-		}
-
 		settings.callbackBefore( toggle, navID ); // Run callbacks before toggling nav
 		toggle.classList.toggle( settings.toggleActiveClass ); // Toggle the '.active' class on the toggle element
 		nav.classList.toggle( settings.navActiveClass ); // Toggle the '.active' class on the menu
 		settings.callbackAfter( toggle, navID ); // Run callbacks after toggling nav
 
+	};
+
+	/**
+	 * Handle click event methods
+	 * @private
+	 */
+	var eventHandler = function () {
+		var toggle = event.target;
+		if ( toggle.hasAttribute('data-nav-toggle') ) {
+			// Prevent default click event
+			if ( toggle.tagName.toLowerCase() === 'a') {
+				event.preventDefault();
+			}
+			// Toggle nav
+			astro.toggleNav( toggle, toggle.getAttribute('data-nav-toggle'), settings );
+		}
 	};
 
 	/**
@@ -106,14 +115,8 @@
 	astro.destroy = function () {
 		if ( !settings ) return;
 		document.documentElement.classList.remove( settings.initClass );
-		if ( toggles ) {
-			forEach( toggles, function ( toggle, index ) {
-				toggle.removeEventListener( 'click', eventListeners[index], false );
-			});
-			eventListeners = [];
-		}
+		document.removeEventListener('click', eventHandler, false);
 		settings = null;
-		toggles = null;
 	};
 
 	/**
@@ -131,15 +134,10 @@
 
 		// Selectors and variables
 		settings = extend( defaults, options || {} ); // Merge user options with defaults
-		toggles = document.querySelectorAll('[data-nav-toggle]'); // Get all nav toggles
 
+		// Listeners and methods
 		document.documentElement.classList.add( settings.initClass ); // Add class to HTML element to activate conditional CSS
-
-		// When a nav toggle is clicked, show or hide the nav
-		forEach(toggles, function (toggle, index) {
-			eventListeners[index] = astro.toggleNav.bind( null, toggle, toggle.getAttribute('data-nav-toggle'), settings );
-			toggle.addEventListener('click', eventListeners[index], false);
-		});
+		document.addEventListener('click', eventHandler, false); // Listen for click events and run event handler
 
 	};
 
