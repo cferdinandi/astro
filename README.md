@@ -193,6 +193,8 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 Astro uses [semantic versioning](http://semver.org/).
 
+* v5.4.1 - August 22, 2014
+	* Fixed `eventHandler` function `event` variable reference.
 * v5.4.0 - August 18, 2014
 	* Switched to event bubbling approach.
 	* Converted to Ruby Sass.

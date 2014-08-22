@@ -96,7 +96,7 @@
 	 * Handle click event methods
 	 * @private
 	 */
-	var eventHandler = function () {
+	var eventHandler = function (event) {
 		var toggle = event.target;
 		if ( toggle.hasAttribute('data-nav-toggle') ) {
 			// Prevent default click event
