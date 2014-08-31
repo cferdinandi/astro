@@ -72,6 +72,32 @@
 	};
 
 	/**
+	 * Get the closest matching element up the DOM tree
+	 * @param {Element} elem Starting element
+	 * @param {String} selector Selector to match against (class, ID, or data attribute)
+	 * @return {Boolean|Element} Returns false if not match found
+	 */
+	var getClosest = function (elem, selector) {
+		var firstChar = selector.charAt(0);
+		for ( ; elem && elem !== document; elem = elem.parentNode ) {
+			if ( firstChar === '.' ) {
+				if ( elem.classList.contains( selector.substr(1) ) ) {
+					return elem;
+				}
+			} else if ( firstChar === '#' ) {
+				if ( elem.id === selector.substr(1) ) {
+					return elem;
+				}
+			} else if ( firstChar === '[' ) {
+				if ( elem.hasAttribute( selector.substr(1, selector.length - 2) ) ) {
+					return elem;
+				}
+			}
+		}
+		return false;
+	};
+
+	/**
 	 * Show and hide navigation menu
 	 * @public
 	 * @param  {Element} toggle Element that triggered the toggle
@@ -97,8 +123,8 @@
 	 * @private
 	 */
 	var eventHandler = function (event) {
-		var toggle = event.target;
-		if ( toggle.hasAttribute('data-nav-toggle') ) {
+		var toggle = getClosest(event.target, '[data-nav-toggle]');
+		if ( toggle ) {
 			// Prevent default click event
 			if ( toggle.tagName.toLowerCase() === 'a') {
 				event.preventDefault();
