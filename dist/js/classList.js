@@ -1,3 +1,12 @@
+/**
+ * Astro v5.4.1
+ * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
+ * http://github.com/cferdinandi/astro
+ * 
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+
 /*
  * classList.js: Cross-browser full element.classList implementation.
  * 2014-01-31
