@@ -132,15 +132,14 @@
 	 * @private
 	 */
 	var eventHandler = function (event) {
-		var toggle = event.target;
-		var closest = getClosest(toggle, '[data-nav-toggle]');
-		if ( closest ) {
+		var toggle = getClosest(event.target, '[data-nav-toggle]');
+		if ( toggle ) {
 			// Prevent default click event
-			if ( closest.tagName.toLowerCase() === 'a') {
+			if ( toggle.tagName.toLowerCase() === 'a') {
 				event.preventDefault();
 			}
 			// Toggle nav
-			astro.toggleNav( closest, closest.getAttribute('data-nav-toggle'), settings );
+			astro.toggleNav( toggle, toggle.getAttribute('data-nav-toggle'), settings );
 		}
 	};
 
