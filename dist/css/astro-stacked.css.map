@@ -1,0 +1,16 @@
+/**
+ * Astro v5.4.3
+ * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
+ * http://github.com/cferdinandi/astro
+ * 
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
+
+{
+"version": 3,
+"mappings": ";;;AAGA,KAAM;EACL,OAAO,EAAE,YAAY;EACrB,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;EAChB,KAAK,ECAQ,OAAO;EDCpB,aAAa,EAAE,KAAY;EAC3B,eAAe,EAAE,IAAI;;;;AAItB,WAAY;EACX,KAAK,ECPQ,OAAO;EDQpB,eAAe,EAAE,IAAI;;;;AAItB,IAAK;EACJ,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;;;;;AAKX,SAAU;EACT,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,KAAY;EACzB,YAAY,EAAE,KAAY;;;;AAI3B,qBAAsB;EACrB,WAAW,EAAE,CAAC;;;;AAIf,oBAAqB;EACpB,YAAY,EAAE,CAAC;;;;;;;;;AAUhB,WAAY;EACX,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM;;;;;;AAOnB,wBAA+B;EAE9B,OAAQ;IACP,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI;IACX,WAAW,EAAE,CAAC;IACd,YAAY,EAAE,CAAC;IACf,WAAW,EAAE,MAAY;IACzB,cAAc,EAAE,MAAY;IAC5B,UAAU,EAAE,UAAU",
+"sources": ["../components/_astro-stacked.scss","../_config.scss"],
+"names": [],
+"file": "astro-stacked.css"
+}
