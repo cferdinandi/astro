@@ -9,10 +9,10 @@ describe('Astro', function () {
 	 */
 	var injectElem = function () {
 		var elem =
-			'<nav class="nav-wrap">' +
+			'<nav class="nav-wrap nav-collapse">' +
 				'<a class="logo" href="#">My Brand</a>' +
 				'<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">Menu</a>' +
-				'<div class="nav-collapse" id="nav-menu">' +
+				'<div class="nav-menu" id="nav-menu">' +
 					'<ul class="nav">' +
 						'<li><a href="#">Home</a></li>' +
 						'<li><a href="#">About</a></li>' +
