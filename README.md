@@ -1,11 +1,11 @@
 # Astro [![Build Status](https://travis-ci.org/cferdinandi/astro.svg)](https://travis-ci.org/cferdinandi/astro)
-A collection of five mobile-first navigation patterns. The "plus" version of each pattern includes an expand-and-collapse menu on small screens.
+A collection of five mobile-first navigation patterns, with an optional expand-and-collapse menu on small screens.
 
-* **Basic | Basic Plus.** A centered navigation and logo.
-* **Basic Left | Basic Left Plus.** A left-aligned navigation and logo.
-* **Navbar | Navbar Plus.** An inline navigation and logo.
-* **Navbar Left | Navbar Left Plus.** An inline navigation and logo with left-aligned navigation.
-* **Stacked | Stacked Plus.** Stacked navigation and logo.
+* **Basic.** A centered navigation and logo.
+* **Basic Left.** A left-aligned navigation and logo.
+* **Navbar.** An inline navigation and logo.
+* **Navbar Left.** An inline navigation and logo with left-aligned navigation.
+* **Stacked.** Stacked navigation and logo.
 
 [Download Astro](https://github.com/cferdinandi/astro/archive/master.zip) / [View the demo](http://cferdinandi.github.io/astro/)
 
@@ -14,14 +14,13 @@ A collection of five mobile-first navigation patterns. The "plus" version of eac
 1. [Getting Started](#getting-started)
 2. [Installing with Package Managers](#installing-with-package-managers)
 3. [Working with the Source Files](#working-with-the-source-files)
-4. [Using Multiple Patterns](#using-multiple-patterns)
-5. [Active Link Styling](#active-link-styling)
-6. [Options & Settings](#options-and-settings)
-7. [Browser Compatibility](#browser-compatibility)
-8. [How to Contribute](#how-to-contribute)
-9. [License](#license)
-10. [Changelog](#changelog)
-11. [Older Docs](#older-docs)
+4. [Active Link Styling](#active-link-styling)
+5. [Options & Settings](#options-and-settings)
+6. [Browser Compatibility](#browser-compatibility)
+7. [How to Contribute](#how-to-contribute)
+8. [License](#license)
+9. [Changelog](#changelog)
+10. [Older Docs](#older-docs)
 
 
 
@@ -33,48 +32,41 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 
 ```html
 <!-- Replace the * with your chosen version of Astro -->
-<link rel="stylesheet" href="dist/css/astro-*-css.css">
+<link rel="stylesheet" href="dist/css/astro-*.css">
 <script src="dist/js/classList.js"></script>
-<script src="dist/js/bind-polyfill.js"></script>
-<script src="dist/js/astro-plus.js"></script>
+<script src="dist/js/astro.js"></script>
 ```
 
 Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
 
 The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
 
-Plus versions of Astro require `astro-plus.js`, and [classList.js](https://github.com/eligrey/classList.js) and `bind-polyfill.js`, polyfills that extend ECMAScript 5 API support to more browsers. Basic versions can omit these files.
+The optional expand-and-collapse menu on smaller screens requires `astro.js`, and [classList.js](https://github.com/eligrey/classList.js) (a polyfill that extends ECMAScript 5 API support to more browsers). Basic versions can omit these files.
 
 ### 2. Add the markup to your HTML.
 
-All five navigation patterns use the same markup structure, though the markup varies slightly between the Basic and Plus versions. For Plus versions of Astro, make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-collapse` section.
-
-#### Basic
+All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
 
 ```html
-<nav class="nav-wrap">
-	<a class="logo" href="#">My Brand</a>
-	<ul class="nav">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-	</ul>
-</nav>
-```
-
-#### Plus
-
-```html
-<nav class="nav-wrap">
-	<a class="logo" href="#">My Brand</a>
-	<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">Menu</a>
-	<div class="nav-collapse" id="nav-menu">
-		<ul class="nav">
+<nav class="nav-wrap-* nav-collapse">
+	<a class="logo-*" href="#">My Brand</a>
+	<a class="nav-toggle-*" data-nav-toggle="#nav-menu" href="#">Menu</a>
+	<div class="nav-menu-*" id="nav-menu">
+		<ul class="nav-*">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 		</ul>
 	</div>
 </nav>
 ```
+
+**Versions**
+
+* `basic`
+* `basic-left`
+* `navbar`
+* `navbar-left`
+* `stacked`
 
 
 ### 3. Initialize Astro.
@@ -85,7 +77,7 @@ All five navigation patterns use the same markup structure, though the markup va
 </script>
 ```
 
-If you're using a Plus version, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
+If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
 
 
 
@@ -101,7 +93,7 @@ You can install Astro with your favorite package manager.
 
 ## Working with the Source Files
 
-If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code, and runs unit tests.
+If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code, and runs unit tests. It's the same build system that's used by [Kraken](http://cferdinandi.github.io/kraken/), so it includes some unnecessary tasks and Sass variables but can be dropped right in to the boilerplate without any configuration.
 
 ### Dependencies
 Make sure these are installed first.
@@ -109,23 +101,15 @@ Make sure these are installed first.
 * [Node.js](http://nodejs.org)
 * [Ruby Sass](http://sass-lang.com/install)
 * [Gulp](http://gulpjs.com) `sudo npm install -g gulp`
-* [PhantomJS](http://phantomjs.org)
 
 ### Quick Start
 
 1. In bash/terminal/command line, `cd` into your project directory.
 2. Run `npm install` to install required files.
-3. When it's done installing, run `gulp` to get going.
-
-Every time you want to run your tasks, run `gulp`.
-
-
-
-## Using Multiple Patterns
-
-For simplicity, each navigation pattern uses the same naming conventions. If you will be using more than one pattern on a project, you'll need to change the class names to avoid conflicts.
-
-For example, if you were combining Astro Basic and Astro Stacked, you might rename `.nav` to `.nav-basic` and `.nav-stacked`, respectively.
+3. When it's done installing, run one of the task runners to get going:
+	* `gulp` manually compiles files.
+	* `gulp watch` automatically compiles files when changes are made.
+	* `gulp reload` automatically compiles files and applies changes using [LiveReload](http://livereload.com/).
 
 
 
@@ -135,12 +119,12 @@ There's a placeholder in the CSS to add styling to the current page in the navig
 
 ```css
 /*  Placeholder for active link styling */
-/*  .nav > li.active > a { */
+/*  .nav-* > li.active > a { */
 /*      Add your styles here */
 /*  } */
 ```
 
-*Note:* If you're using WordPress, check out [this great tutorial by Todd Motto](http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals) on how to add the `.active` class using a simple PHP function.
+***Note:*** *If you're using WordPress, check out [this great tutorial by Todd Motto](http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals) on how to add the `.active` class using a simple PHP function.*
 
 
 
@@ -216,6 +200,10 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 Astro uses [semantic versioning](http://semver.org/).
 
+* v6.0.0 - October 17, 2014
+	* Removed `.bind` dependency and polyfill.
+	* Updated `gulpfile.js` tasks and namespacing.
+	* Changed namespacing to allow for multiple patterns to be used together.
 * v5.4.3 - October 2, 2014
 	* Fixed CommonJS bug.
 	* Added lazypipe to `gulpfile.js`.
