@@ -24,7 +24,7 @@
 /*  Remove default list styling for navigation list */
 .nav-basic {
 	list-style: none;
-	margin: 0;
+	margin: 0 calc-em(-8px);
 	padding: 0;
 }
 
@@ -35,16 +35,6 @@
 	float: none;
 	margin-left: calc-em(8px);
 	margin-right: calc-em(8px);
-}
-
-/*  Remove margin-left on first navigation item */
-.nav-basic > li:first-child {
-	margin-left: 0;
-}
-
-/*  Remove margin-right on last navigation item */
-.nav-basic > li:last-child {
-	margin-right: 0;
 }
 
 /*  Placeholder for active link styling */
