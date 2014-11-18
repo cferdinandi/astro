@@ -292,4 +292,4 @@ Astro uses [semantic versioning](http://semver.org/).
 ## Older Docs
 
 * [Version 4](https://github.com/cferdinandi/astro/tree/archive-v4)
-* [Version 3](http://cferdinandi.github.io/astro/archive/v3/)
+* [Version 3](https://github.com/cferdinandi/astro/tree/archive-v3)
