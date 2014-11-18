@@ -1,5 +1,5 @@
 /**
- * Astro v6.0.0
+ * Astro v6.1.0
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -38,7 +38,7 @@
 /*  Remove default list styling for navigation list */
 .nav-basic-left {
   list-style: none;
-  margin: 0;
+  margin: 0 -0.5em;
   padding: 0;
 }
 
@@ -49,16 +49,6 @@
   float: none;
   margin-left: 0.5em;
   margin-right: 0.5em;
-}
-
-/*  Remove margin-left on first navigation item */
-.nav-basic-left > li:first-child {
-  margin-left: 0;
-}
-
-/*  Remove margin-right on last navigation item */
-.nav-basic-left > li:last-child {
-  margin-right: 0;
 }
 
 /*  Placeholder for active link styling */
@@ -105,8 +95,6 @@
   .js-astro .nav-collapse .nav-menu-basic-left li {
     display: block;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     -webkit-box-sizing: border-box;

@@ -30,7 +30,7 @@
 /*  Remove default list styling for navigation list */
 .nav-basic-left {
 	list-style: none;
-	margin: 0;
+	margin: 0 calc-em(-8px);
 	padding: 0;
 }
 
@@ -41,16 +41,6 @@
 	float: none;
 	margin-left: calc-em(8px);
 	margin-right: calc-em(8px);
-}
-
-/*  Remove margin-left on first navigation item */
-.nav-basic-left > li:first-child {
-	margin-left: 0;
-}
-
-/*  Remove margin-right on last navigation item */
-.nav-basic-left > li:last-child {
-	margin-right: 0;
 }
 
 /*  Placeholder for active link styling */
@@ -100,8 +90,6 @@
 	.js-astro .nav-collapse .nav-menu-basic-left li {
 		display: block;
 		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
 		padding-top: calc-em(4px);
 		padding-bottom: calc-em(4px);
 		box-sizing: border-box;
