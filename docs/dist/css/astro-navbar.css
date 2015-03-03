@@ -1,5 +1,5 @@
 /**
- * Astro v6.1.0
+ * Astro v6.2.0
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -7,14 +7,18 @@
  * http://gomakethings.com/mit/
  */
 
-/*  Center all navigation elements */
+/**
+ * Center all navigation elements
+ */
+/* line 4, ../components/_astro-navbar.scss */
 .nav-wrap-navbar {
   text-align: center;
 }
 
-/*  For text-based logo, override default link styling.
- *  If .logo and .nav don't align properly,
- *  adjust the .logo line-height. */
+/**
+ * For text-based logo, override default link styling.
+ */
+/* line 11, ../components/_astro-navbar.scss */
 .logo-navbar {
   display: inline-block;
   font-size: 1.2em;
@@ -24,21 +28,30 @@
   text-decoration: none;
 }
 
-/*  For text-based logo, override default link hover styling */
+/**
+ * For text-based logo, override default link hover styling
+ */
+/* line 23, ../components/_astro-navbar.scss */
 .logo-navbar:hover {
   color: #272727;
   text-decoration: none;
 }
 
-/*  Remove default list styling for navigation list */
+/**
+ * Remove default list styling for navigation list
+ */
+/* line 31, ../components/_astro-navbar.scss */
 .nav-navbar {
   list-style: none;
   margin: 0 -0.5em;
   padding: 0;
 }
 
-/*  Display navigation items as inline-block elements.
- *  Add slight margin between each navigation item. */
+/**
+ * Display navigation items as inline-block elements.
+ * Add slight margin between each navigation item.
+ */
+/* line 41, ../components/_astro-navbar.scss */
 .nav-navbar > li {
   display: inline-block;
   float: none;
@@ -46,66 +59,73 @@
   margin-right: 0.5em;
 }
 
-/*  Placeholder for active link styling */
-/*  .nav-navbar > li.active > a { */
-/*      Add your styles here */
-/*  } */
-/*  Hide the navigation toggle menu button by default.
- *  Only needed for expand-and-collapse option. */
+/**
+ * Hide the navigation toggle menu button by default.
+ * Only needed for expand-and-collapse option.
+ * */
+/* line 57, ../components/_astro-navbar.scss */
 .nav-toggle-navbar {
   display: none;
   visibility: hidden;
 }
 
-/*  Expand-and-Collapse styling for smaller screens.
- *  Remove if not using.
- *  Change max-width to fit your project. */
+/**
+ * Expand-and-Collapse styling for smaller screens.
+ * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ */
 @media (max-width: 40em) {
-  /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
-   *  This requires on the included js-accessibility.js-astro script. */
-  /*  Align text to the left when javascript is supported */
+  /**
+   * Align text to the left when javascript is supported
+   */
+  /* line 72, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-wrap-navbar {
     text-align: left;
   }
 
-  /*  Float logo to the left when javascript is supported */
+  /**
+   * Float logo to the left when javascript is supported
+   */
+  /* line 79, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .logo-navbar {
     float: left;
   }
 
-  /*  Display navigation toggle button if javascript is supported */
+  /**
+   * Display navigation toggle button if javascript is supported
+   */
+  /* line 86, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-toggle-navbar {
     display: block;
     visibility: visible;
     float: right;
   }
 
-  /*  Hide navigation items if javascript is supported */
+  /**
+   * Hide navigation items if javascript is supported.
+   * Show with `.active` class.
+   */
+  /* line 96, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar {
-    max-height: 0;
-    overflow: hidden;
-    display: block;
-    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    /*  CSS3 animation for when menu content expands */
-    -webkit-transition: all 0.35s ease-in;
-    transition: all 0.35s ease-in;
+    display: none;
+    width: 100%;
   }
-
-  /*  When collapsed element has the .active class, show it
-   *  Uses max-height instead of display: none to allow for
-   *  CSS3 animations, which don't work on display values. */
+  /* line 101, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar.active {
-    max-height: 999em;
+    display: block;
   }
 
+  /* line 106, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-navbar {
     text-align: left;
   }
 
-  /*  Display navigation items as full-width, stacked blocks when javascript supported */
+  /**
+   * Display navigation items as full-width, stacked blocks when javascript supported
+   */
+  /* line 113, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar li {
     display: block;
     width: 100%;
@@ -116,32 +136,45 @@
     box-sizing: border-box;
   }
 }
-/*  Styling for Bigger Screens.
- *  (Astro is built mobile-first.)
- *  Change min-width to fit your project. */
+/**
+ * Styling for bigger screens.
+ */
 @media (min-width: 40em) {
-  /*  Align text to the left */
+  /**
+   * Align text to the left
+   */
+  /* line 132, ../components/_astro-navbar.scss */
   .nav-wrap-navbar {
     text-align: left;
   }
 
-  /*  Float logo to the left and remove margin-bottom */
+  /**
+   * Float logo to the left and remove margin-bottom
+   */
+  /* line 139, ../components/_astro-navbar.scss */
   .logo-navbar {
     float: left;
   }
 
-  /*  Align navigation elements to the right */
+  /**
+   * Align navigation elements to the right
+   */
+  /* line 146, ../components/_astro-navbar.scss */
   .nav-navbar {
     text-align: right;
   }
 }
-/*  Clearfix */
+/**
+ * Clearfix
+ */
+/* line 155, ../components/_astro-navbar.scss */
 .nav-wrap-navbar:before,
 .nav-wrap-navbar:after {
   display: table;
   content: "";
 }
 
+/* line 161, ../components/_astro-navbar.scss */
 .nav-wrap-navbar:after {
   clear: both;
 }
