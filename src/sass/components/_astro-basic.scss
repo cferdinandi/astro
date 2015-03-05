@@ -1,11 +1,13 @@
-/*  Center all navigation elements */
+/**
+ * Center all navigation elements
+ */
 .nav-wrap-basic {
 	text-align: center;
 }
 
-/*  For text-based logo, override default link styling.
- *  If .logo and .nav don't align properly,
- *  adjust the .logo line-height. */
+/**
+ * For text-based logo, override default link styling.
+ */
 .logo-basic {
 	display: block;
 	font-size: 1.2em;
@@ -15,21 +17,27 @@
 	text-decoration: none;
 }
 
-/*  For text-based logo, override default link hover styling */
+/**
+ * For text-based logo, override default link hover styling
+ */
 .logo-basic:hover {
 	color: $color-black;
 	text-decoration: none;
 }
 
-/*  Remove default list styling for navigation list */
+/**
+ * Remove default list styling for navigation list
+ */
 .nav-basic {
 	list-style: none;
 	margin: 0 calc-em(-8px);
 	padding: 0;
 }
 
-/*  Display navigation items as inline-block elements.
- *  Add slight margin between each navigation item. */
+/**
+ * Display navigation items as inline-block elements.
+ * Add slight margin between each navigation item.
+ * */
 .nav-basic > li {
 	display: inline-block;
 	float: none;
@@ -37,49 +45,49 @@
 	margin-right: calc-em(8px);
 }
 
-/*  Placeholder for active link styling */
-/*  .nav-basic > li.active > a { */
-/*      Add your styles here */
-/*  } */
+// /**
+//  * Active link styling
+//  */
+// .nav-basic > li.active > a {}
 
-/*  Hide the navigation toggle menu button by default.
- *  Only needed for expand-and-collapse option. */
+/**
+ * Hide the navigation toggle menu button by default.
+ * Only needed for expand-and-collapse option.
+ */
 .nav-toggle-basic {
 	display: none;
 	visibility: hidden;
 }
 
 
-/*  Expand-and-Collapse styling for smaller screens.
- *  Remove if not using.
- *  Change max-width to fit your project. */
+/**
+ * Expand-and-Collapse styling for smaller screens.
+ * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ */
 @media (max-width: $bp-medium) {
 
-	/*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
-	 *  This requires on the included js-accessibility.js-astro script. */
-
-	/*  Display navigation toggle button if javascript is supported */
+	/**
+	 * Display navigation toggle button if javascript is supported
+	 */
 	.js-astro .nav-collapse .nav-toggle-basic {
 		display: block;
 		visibility: visible;
 	}
 
-	/*  Hide navigation items if javascript is supported */
+	/**
+	 * Hide navigation items if javascript is supported
+	 */
 	.js-astro .nav-collapse .nav-menu-basic {
-		max-height: 0;
-		overflow: hidden;
-		/*  CSS3 animation for when menu content expands */
-		transition: all 0.35s ease-in;
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 
-	/*  When collapsed element has the .active class, show it
-	 *  Uses max-height instead of display: none to allow for
-	 *  CSS3 animations, which don't work on display values. */
-	.js-astro .nav-collapse .nav-menu-basic.active {
-		max-height: 999em;
-	}
-
-	/*  Display navigation items as full-width, stacked blocks when javascript supported */
+	/**
+	 * Display navigation items as full-width, stacked blocks when javascript supported
+	 */
 	.js-astro .nav-collapse .nav-menu-basic li {
 		display: block;
 		width: 100%;

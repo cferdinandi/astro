@@ -1,5 +1,5 @@
 /**
- * Astro v6.1.0
+ * Astro v6.2.1
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -7,9 +7,11 @@
  * http://gomakethings.com/mit/
  */
 
-/*  For text-based logo, override default link styling.
- *  If .logo and .nav don't align properly,
- *  adjust the .logo line-height. */
+/**
+ * For text-based logo, override default link styling.
+ * If .logo and .nav don't align properly, adjust the .logo line-height.
+ */
+/* line 5, ../components/_astro-stacked.scss */
 .logo-stacked {
   display: inline-block;
   font-size: 1.2em;
@@ -19,21 +21,30 @@
   text-decoration: none;
 }
 
-/*  For text-based logo, override default link hover styling */
+/**
+ * For text-based logo, override default link hover styling
+ */
+/* line 17, ../components/_astro-stacked.scss */
 .logo-stacked:hover {
   color: #272727;
   text-decoration: none;
 }
 
-/*  Remove default list styling for navigation list */
+/**
+ * Remove default list styling for navigation list
+ */
+/* line 25, ../components/_astro-stacked.scss */
 .nav-stacked {
   list-style: none;
   margin: 0 -0.5em;
   padding: 0;
 }
 
-/*  Display navigation items as inline-block elements.
- *  Add slight margin between each navigation item. */
+/**
+ * Display navigation items as inline-block elements.
+ * Add slight margin between each navigation item.
+ */
+/* line 35, ../components/_astro-stacked.scss */
 .nav-stacked > li {
   display: inline-block;
   float: none;
@@ -41,47 +52,48 @@
   margin-right: 0.5em;
 }
 
-/*  Placeholder for active link styling */
-/*  .nav-stacked > li.active > a { */
-/*      Add your styles here */
-/*  } */
-/*  Hide the navigation toggle menu button by default.
- *  Only needed for expand-and-collapse option. */
+/**
+ * Hide the navigation toggle menu button by default.
+ * Only needed for expand-and-collapse option.
+ */
+/* line 51, ../components/_astro-stacked.scss */
 .nav-toggle-stacked {
   display: none;
   visibility: hidden;
 }
 
-/*  Expand-and-Collapse styling for smaller screens.
- *  Remove if not using.
- *  Change max-width to fit your project. */
+/**
+ * Expand-and-Collapse styling for smaller screens.
+ * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ */
 @media (max-width: 40em) {
-  /*  .js-astro prefix ensure content is only hidden when JavaScript is supported.
-   *  This requires on the included js-accessibility.js-astro script. */
-  /*  Display navigation toggle button if javascript is supported */
+  /**
+   * Display navigation toggle button if javascript is supported
+   */
+  /* line 66, ../components/_astro-stacked.scss */
   .js-astro .nav-collapse .nav-toggle-stacked {
     display: block;
     visibility: visible;
     float: right;
   }
 
-  /*  Hide navigation items if javascript is supported */
+  /**
+   * Hide navigation items if javascript is supported.
+   * Show with `.active` class.
+   */
+  /* line 76, ../components/_astro-stacked.scss */
   .js-astro .nav-collapse .nav-menu-stacked {
-    max-height: 0;
-    overflow: hidden;
-    /*  CSS3 animation for when menu content expands */
-    -webkit-transition: all 0.35s ease-in;
-    transition: all 0.35s ease-in;
+    display: none;
   }
-
-  /*  When collapsed element has the .active class, show it
-   *  Uses max-height instead of display: none to allow for
-   *  CSS3 animations, which don't work on display values. */
+  /* line 79, ../components/_astro-stacked.scss */
   .js-astro .nav-collapse .nav-menu-stacked.active {
-    max-height: 999em;
+    display: block;
   }
 
-  /*  Display navigation items as full-width, stacked blocks when javascript supported */
+  /**
+   * Display navigation items as full-width, stacked blocks when javascript supported
+   */
+  /* line 87, ../components/_astro-stacked.scss */
   .js-astro .nav-collapse .nav-menu-stacked li {
     display: block;
     width: 100%;
@@ -92,10 +104,11 @@
     box-sizing: border-box;
   }
 }
-/*  Styling for Bigger Screens.
- *  (Astro is built mobile-first.)
- *  Change min-width to fit your project. */
+/**
+ * Styling for bigger screens.
+ */
 @media (min-width: 40em) {
+  /* line 103, ../components/_astro-stacked.scss */
   .nav-stacked li {
     display: block;
     width: 100%;

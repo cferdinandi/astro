@@ -199,6 +199,10 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 Astro uses [semantic versioning](http://semver.org/).
 
+* v6.2.1 - March 4, 2015
+	* Fixed navbar alignment bug.
+* v6.2.0 - March 2, 2015
+	* Removed animation from open/close for faster appearance.
 * v6.1.0 - November 17, 2014
 	* Switched to negative margins on list to counteract li margin.
 * v6.0.0 - October 17, 2014
