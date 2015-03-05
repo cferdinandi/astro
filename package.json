@@ -1,6 +1,6 @@
 {
 	"name": "Astro",
-	"version": "6.2.0",
+	"version": "6.2.1",
 	"description": "A collection of mobile-first navigation patterns.",
 	"main": "./dist",
 	"author": {

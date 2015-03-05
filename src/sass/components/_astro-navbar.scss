@@ -69,15 +69,8 @@
 	/**
 	 * Align text to the left when javascript is supported
 	 */
-	.js-astro .nav-collapse .nav-wrap-navbar {
+	.js-astro .nav-wrap-navbar.nav-collapse  {
 		text-align: left;
-	}
-
-	/**
-	 * Float logo to the left when javascript is supported
-	 */
-	.js-astro .nav-collapse .logo-navbar {
-		float: left;
 	}
 
 	/**

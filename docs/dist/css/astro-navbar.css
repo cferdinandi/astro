@@ -1,5 +1,5 @@
 /**
- * Astro v6.2.0
+ * Astro v6.2.1
  * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
  * http://github.com/cferdinandi/astro
  * 
@@ -78,22 +78,14 @@
    * Align text to the left when javascript is supported
    */
   /* line 72, ../components/_astro-navbar.scss */
-  .js-astro .nav-collapse .nav-wrap-navbar {
+  .js-astro .nav-wrap-navbar.nav-collapse {
     text-align: left;
-  }
-
-  /**
-   * Float logo to the left when javascript is supported
-   */
-  /* line 79, ../components/_astro-navbar.scss */
-  .js-astro .nav-collapse .logo-navbar {
-    float: left;
   }
 
   /**
    * Display navigation toggle button if javascript is supported
    */
-  /* line 86, ../components/_astro-navbar.scss */
+  /* line 79, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-toggle-navbar {
     display: block;
     visibility: visible;
@@ -104,7 +96,7 @@
    * Hide navigation items if javascript is supported.
    * Show with `.active` class.
    */
-  /* line 96, ../components/_astro-navbar.scss */
+  /* line 89, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -112,12 +104,12 @@
     display: none;
     width: 100%;
   }
-  /* line 101, ../components/_astro-navbar.scss */
+  /* line 94, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar.active {
     display: block;
   }
 
-  /* line 106, ../components/_astro-navbar.scss */
+  /* line 99, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-navbar {
     text-align: left;
   }
@@ -125,7 +117,7 @@
   /**
    * Display navigation items as full-width, stacked blocks when javascript supported
    */
-  /* line 113, ../components/_astro-navbar.scss */
+  /* line 106, ../components/_astro-navbar.scss */
   .js-astro .nav-collapse .nav-menu-navbar li {
     display: block;
     width: 100%;
@@ -143,7 +135,7 @@
   /**
    * Align text to the left
    */
-  /* line 132, ../components/_astro-navbar.scss */
+  /* line 125, ../components/_astro-navbar.scss */
   .nav-wrap-navbar {
     text-align: left;
   }
@@ -151,7 +143,7 @@
   /**
    * Float logo to the left and remove margin-bottom
    */
-  /* line 139, ../components/_astro-navbar.scss */
+  /* line 132, ../components/_astro-navbar.scss */
   .logo-navbar {
     float: left;
   }
@@ -159,7 +151,7 @@
   /**
    * Align navigation elements to the right
    */
-  /* line 146, ../components/_astro-navbar.scss */
+  /* line 139, ../components/_astro-navbar.scss */
   .nav-navbar {
     text-align: right;
   }
@@ -167,14 +159,14 @@
 /**
  * Clearfix
  */
-/* line 155, ../components/_astro-navbar.scss */
+/* line 148, ../components/_astro-navbar.scss */
 .nav-wrap-navbar:before,
 .nav-wrap-navbar:after {
   display: table;
   content: "";
 }
 
-/* line 161, ../components/_astro-navbar.scss */
+/* line 154, ../components/_astro-navbar.scss */
 .nav-wrap-navbar:after {
   clear: both;
 }
