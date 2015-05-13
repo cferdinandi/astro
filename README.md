@@ -199,7 +199,9 @@ Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
 
 Astro uses [semantic versioning](http://semver.org/).
 
-* v6.2.3 - March 9 2015
+* v6.2.4 - May 13, 2015
+	* Fixed Browserify `window` bug.
+* v6.2.3 - March 9, 2015
 	* REALLY fixed UMD wrapper.
 * v6.2.2 - March 6, 2015
 	* Fixed AMD wrapper window variable.
