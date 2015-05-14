@@ -19,8 +19,7 @@ A collection of five mobile-first navigation patterns, with an optional expand-a
 6. [Browser Compatibility](#browser-compatibility)
 7. [How to Contribute](#how-to-contribute)
 8. [License](#license)
-9. [Changelog](#changelog)
-10. [Older Docs](#older-docs)
+9. [Older Docs](#older-docs)
 
 
 
@@ -192,111 +191,6 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 ## License
 
 Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
-
-
-
-## Changelog
-
-Astro uses [semantic versioning](http://semver.org/).
-
-* v6.2.4 - May 13, 2015
-	* Fixed Browserify `window` bug.
-* v6.2.3 - March 9, 2015
-	* REALLY fixed UMD wrapper.
-* v6.2.2 - March 6, 2015
-	* Fixed AMD wrapper window variable.
-* v6.2.1 - March 4, 2015
-	* Fixed navbar alignment bug.
-* v6.2.0 - March 2, 2015
-	* Removed animation from open/close for faster appearance.
-* v6.1.0 - November 17, 2014
-	* Switched to negative margins on list to counteract li margin.
-* v6.0.0 - October 17, 2014
-	* Removed `.bind` dependency and polyfill.
-	* Updated `gulpfile.js` tasks and namespacing.
-	* Changed namespacing to allow for multiple patterns to be used together.
-* v5.4.3 - October 2, 2014
-	* Fixed CommonJS bug.
-	* Added lazypipe to `gulpfile.js`.
-	* Updated travis config file.
-* v5.4.2 - August 31, 2014
-	* Fixed event listener filter to account for sub elements.
-* v5.4.1 - August 22, 2014
-	* Fixed `eventHandler` function `event` variable reference.
-* v5.4.0 - August 18, 2014
-	* Switched to event bubbling approach.
-	* Converted to Ruby Sass.
-	* Fixed testing path.
-* v5.3.2 - August 15, 2014
-	* Updated UMD pattern to fix a few bugs.
-* v5.3.1 - August 8, 2014
-	* Added polyfill for `Functions.prototype.bind`.
-	* Removed Sass paths from `gulpfile.js`.
-* v5.3.0 - June 28, 2014
-	* Added a `destroy()` method.
-	* Updated unit tests.
-* v5.2.2 - June 28, 2014
-	* Fixed `extend()` function.
-* v5.2.1 - June 19, 2014
-	* Converted to gulp.js workflow.
-	* Added unit testing.
-	* Updated naming conventions.
-	* Removed unused `_mixins.scss` file.
-	* Added minified versions of files.
-* v5.1.1 - June 19, 2014
-	* Fixed factory/root/UMD definition.
-* v5.1.0 - June 6, 2014
-	* Converted to UMD module.
-	* Replaced Buoy with classList.js polyfill.
-	* Moved public APIs to exports variable.
-	* Improved feature test.
-	* Replaced Array.prototype.forEach hack with proper forEach function.
-	* Added a more well supported trim function.
-	* General code optimizations for better minification and performance.
-	* Updated to JSDoc documentation (sort of).
-	* Updated to three number versioning system.
-	* Added package manager installation info.
-* v5.0 - April 3, 2014
-	* Converted from Buoy class helpers to `classList` with polyfill.
-* v4.1 - February 27, 2014
-	* Converted `_defaults` to a literal object
-* v4.0 - February 24, 2014
-	* Better public/private method namespacing.
-	* Require `init()` call to run.
-	* New API exposes additional methods for use in your own scripts.
-	* Better documentation.
-* v3.6 - February 5, 2014
-	* Switched to a data attribute for the toggle selector (separates scripts from styles).
-	* Added namespacing to IIFE.
-	* Moved feature test to script itself for better progressive enhancement.
-	* Updated looping method.
-* v3.5 - December 4, 2013
-	* Added Sass support.
-* v3.4 - August 27, 2013
-	* Added missing semicolon.
-* v3.3 - August 26, 2013
-	* Converted to an IIFE pattern.
-	* Added Buoy micro-library.
-* v3.2 - August 14,2013
-	* Added `toggleNav` function to make code more DRY.
-* v3.1 - August 12, 2013
-	* Fixed IE 9/10 bug.
-* v3.0 - August 9, 2013
-	* Rewritten in vanilla JS.
-	* Removed dependence on jQuery.
-* v2.0 - June 7, 2013
-	* Switched to MIT license.
-* v2.0 - June 5, 2013
-	* Removed `href` as element selector. Just `data-target` supported now.
-* v1.1 - February 13, 2013
-	* Renamed `example.html` to `index.html`.
-	* Removed "Convert to Vanilla JS" from roadmap.
-* v1.1 - February 10, 2013
-	* Added placeholder active link styling.
-* v1.1 - February 5, 2013
-	* Switched to relative sizing (ems and %'s instead of px).
-* v1.0 - January 31, 2013
-	* Initial release.
 
 
 
