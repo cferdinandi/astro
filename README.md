@@ -19,7 +19,6 @@ A collection of five mobile-first navigation patterns, with an optional expand-a
 6. [Browser Compatibility](#browser-compatibility)
 7. [How to Contribute](#how-to-contribute)
 8. [License](#license)
-9. [Older Docs](#older-docs)
 
 
 
@@ -190,11 +189,4 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 
 ## License
 
-Astro is licensed under the [MIT License](http://gomakethings.com/mit/).
-
-
-
-## Older Docs
-
-* [Version 4](https://github.com/cferdinandi/astro/tree/archive-v4)
-* [Version 3](https://github.com/cferdinandi/astro/tree/archive-v3)
+The code is available under the [MIT License](LICENSE.md).
