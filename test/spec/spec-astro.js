@@ -105,8 +105,7 @@ describe('Astro', function () {
 				toggleActiveClass: 'toggle-active',
 				navActiveClass: 'nav-active',
 				initClass: 'js-test',
-				callbackBefore: function () { document.documentElement.classList.add('callback-before'); },
-				callbackAfter: function () { document.documentElement.classList.add('callback-after'); }
+				callback: function () { document.documentElement.classList.add('callback'); }
 			});
 			toggle = document.querySelector('[data-nav-toggle]');
 			nav = document.querySelector( toggle.getAttribute('data-nav-toggle') );
@@ -118,8 +117,7 @@ describe('Astro', function () {
 			expect(toggle.classList.contains('toggle-active')).toBe(true);
 			expect(nav.classList.contains('nav-active')).toBe(true);
 			expect(doc.classList.contains('js-test')).toBe(true);
-			expect(doc.classList.contains('callback-before')).toBe(true);
-			expect(doc.classList.contains('callback-after')).toBe(true);
+			expect(doc.classList.contains('callback')).toBe(true);
 		});
 
 	});
