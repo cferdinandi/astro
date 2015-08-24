@@ -97,7 +97,6 @@ If you would prefer, you can work with the development code in the `src` directo
 Make sure these are installed first.
 
 * [Node.js](http://nodejs.org)
-* [Ruby Sass](http://sass-lang.com/install)
 * [Gulp](http://gulpjs.com) `sudo npm install -g gulp`
 
 ### Quick Start
@@ -138,8 +137,7 @@ astro.init({
 	toggleActiveClass: 'active', // Class added to active dropdown toggles on small screens
 	navActiveClass: 'active', // Class added to active dropdown content areas on small screens
 	initClass: 'js-astro', // Class added to `<html>` element when initiated
-	callbackBefore: function ( toggle, navID ) {}, // Function that's run before a dropdown is toggled
-	callbackAfter: function ( toggle, navID ) {} // Function that's run after a dropdown is toggled
+	callback: function ( toggle, navID ) {} // Function that's run after a dropdown is toggled
 });
 ```
 
