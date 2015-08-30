@@ -1,0 +1,7 @@
+/*! Astro v8.0.0 | (c) 2015 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/astro */
+/*!
+ * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * (c) 2015 Chris Ferdinandi
+ * MIT License
+ * http://github.com/cferdinandi/astro
+ */.logo-navbar,.logo-navbar:hover{color:#272727;text-decoration:none}.nav-wrap-navbar{text-align:center}.logo-navbar{display:inline-block;font-size:1.2em;line-height:1.2;margin-bottom:.5em}.nav-navbar{list-style:none;margin:0 -.5em;padding:0}.nav-navbar>li{display:inline-block;float:none;margin-left:.5em;margin-right:.5em}.nav-toggle-navbar{display:none;visibility:hidden}@media (max-width:40em){.astro .nav-collapse .nav-navbar,.astro .nav-wrap-navbar.nav-collapse{text-align:left}.astro .nav-collapse .nav-toggle-navbar{display:block;visibility:visible;float:right}.astro .nav-collapse .nav-menu-navbar{box-sizing:border-box;display:none;width:100%}.astro .nav-collapse .nav-menu-navbar.active{display:block}.astro .nav-collapse .nav-menu-navbar li{display:block;width:100%;padding-top:.25em;padding-bottom:.25em;box-sizing:border-box}}@media (min-width:40em){.nav-wrap-navbar{text-align:left}.logo-navbar{float:left}.nav-navbar{text-align:right}}.nav-wrap-navbar:after,.nav-wrap-navbar:before{display:table;content:""}.nav-wrap-navbar:after{clear:both}

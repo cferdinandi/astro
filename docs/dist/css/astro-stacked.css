@@ -1,10 +1,8 @@
-/**
- * Astro v7.0.0
- * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
+/*!
+ * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * (c) 2015 Chris Ferdinandi
+ * MIT License
  * http://github.com/cferdinandi/astro
- * 
- * Free to use under the MIT License.
- * http://gomakethings.com/mit/
  */
 
 /**
@@ -64,14 +62,14 @@
 
 /**
  * Expand-and-Collapse styling for smaller screens.
- * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ * .astro prefix ensure content is only hidden when JavaScript is supported.
  */
 @media (max-width: 40em) {
   /**
 	 * Display navigation toggle button if javascript is supported
 	 */
   /* line 66, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .js-astro .nav-collapse .nav-toggle-stacked {
+  .astro .nav-collapse .nav-toggle-stacked {
     display: block;
     visibility: visible;
     float: right;
@@ -81,18 +79,18 @@
 	 * Show with `.active` class.
 	 */
   /* line 76, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .js-astro .nav-collapse .nav-menu-stacked {
+  .astro .nav-collapse .nav-menu-stacked {
     display: none;
   }
   /* line 79, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .js-astro .nav-collapse .nav-menu-stacked.active {
+  .astro .nav-collapse .nav-menu-stacked.active {
     display: block;
   }
   /**
 	 * Display navigation items as full-width, stacked blocks when javascript supported
 	 */
   /* line 87, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .js-astro .nav-collapse .nav-menu-stacked li {
+  .astro .nav-collapse .nav-menu-stacked li {
     display: block;
     width: 100%;
     padding-top: 0.25em;

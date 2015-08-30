@@ -1,3 +1,10 @@
+/*!
+ * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * (c) 2015 Chris Ferdinandi
+ * MIT License
+ * http://github.com/cferdinandi/astro
+ */
+
 var astro = function ( toggle, menus, cb ) {
 
 	'use strict';
