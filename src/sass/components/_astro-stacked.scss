@@ -56,14 +56,14 @@
 
 /**
  * Expand-and-Collapse styling for smaller screens.
- * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ * .astro prefix ensure content is only hidden when JavaScript is supported.
  */
 @media (max-width: $bp-medium) {
 
 	/**
 	 * Display navigation toggle button if javascript is supported
 	 */
-	.js-astro .nav-collapse .nav-toggle-stacked {
+	.astro .nav-collapse .nav-toggle-stacked {
 		display: block;
 		visibility: visible;
 		float: right;
@@ -73,7 +73,7 @@
 	 * Hide navigation items if javascript is supported.
 	 * Show with `.active` class.
 	 */
-	.js-astro .nav-collapse .nav-menu-stacked {
+	.astro .nav-collapse .nav-menu-stacked {
 		display: none;
 
 		&.active {
@@ -84,7 +84,7 @@
 	/**
 	 * Display navigation items as full-width, stacked blocks when javascript supported
 	 */
-	.js-astro .nav-collapse .nav-menu-stacked li {
+	.astro .nav-collapse .nav-menu-stacked li {
 		display: block;
 		width: 100%;
 		padding-top: calc-em(4px);

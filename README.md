@@ -9,73 +9,90 @@ A collection of five mobile-first navigation patterns, with an optional expand-a
 
 [Download Astro](https://github.com/cferdinandi/astro/archive/master.zip) / [View the demo](http://cferdinandi.github.io/astro/)
 
-**In This Documentation**
 
-1. [Getting Started](#getting-started)
-2. [Installing with Package Managers](#installing-with-package-managers)
-3. [Working with the Source Files](#working-with-the-source-files)
-4. [Active Link Styling](#active-link-styling)
-5. [Options & Settings](#options-and-settings)
-6. [Browser Compatibility](#browser-compatibility)
-7. [How to Contribute](#how-to-contribute)
-8. [License](#license)
+## Usage
+
+Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
+
+1. Include Astro on your site.
+
+	```html
+	<!-- Replace the * with your chosen version of Astro -->
+	<link rel="stylesheet" href="dist/css/astro-*.css">
+	<script src="dist/js/astro.js"></script>
+	```
+2. Add the markup to your HTML.
+	All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
+
+	```html
+	<nav class="nav-wrap-* nav-collapse">
+		<a class="logo-*" href="#">My Brand</a>
+		<a class="nav-toggle-*" data-nav-toggle="#nav-menu" href="#">Menu</a>
+		<div class="nav-menu-*" id="nav-menu">
+			<ul class="nav-*">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+	</nav>
+	```
+
+	**Versions**
+
+	* `basic`
+	* `basic-left`
+	* `navbar`
+	* `navbar-left`
+	* `stacked`
+3. Initialize Astro.
+	If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
+
+	```js
+	astro( toggle, menus, cb );
+		toggle, // Selector for the element that toggles visibility (uses document.querySelector)
+		menus, // Selector for the menu (uses document.querySelectorAll)
+		cb // Callback to run after password visibility changes
+	);
+	```
 
 
-
-## Getting Started
-
-Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code. Unit tests are located in the `test` directory.
-
-### 1. Include Astro on your site.
+## Example
 
 ```html
-<!-- Replace the * with your chosen version of Astro -->
-<link rel="stylesheet" href="dist/css/astro-*.css">
-<script src="dist/js/classList.js"></script>
-<script src="dist/js/astro.js"></script>
-```
+<link rel="stylesheet" href="dist/css/astro-navbar.css" type="text/css">
 
-Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
-
-The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
-
-The optional expand-and-collapse menu on smaller screens requires `astro.js`, and [classList.js](https://github.com/eligrey/classList.js) (a polyfill that extends ECMAScript 5 API support to more browsers). Basic versions can omit these files.
-
-### 2. Add the markup to your HTML.
-
-All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
-
-```html
-<nav class="nav-wrap-* nav-collapse">
-	<a class="logo-*" href="#">My Brand</a>
-	<a class="nav-toggle-*" data-nav-toggle="#nav-menu" href="#">Menu</a>
-	<div class="nav-menu-*" id="nav-menu">
-		<ul class="nav-*">
+<p><strong>Simple</strong></p>
+<nav class="nav-wrap-navbar">
+	<a class="logo-navbar" href="#">My Brand</a>
+	<div class="nav-menu-navbar">
+		<ul class="nav-navbar">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 		</ul>
 	</div>
 </nav>
-```
 
-**Versions**
+<p><strong>Expand-and-Collapse</strong></p>
+<nav class="nav-wrap-navbar nav-collapse">
+	<a class="logo-navbar" href="#">My Brand</a>
+	<a class="nav-toggle-navbar js-astro" href="#">Menu</a>
+	<div class="nav-menu-navbar" id="nav">
+		<ul class="nav-navbar">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+	</div>
+</nav>
 
-* `basic`
-* `basic-left`
-* `navbar`
-* `navbar-left`
-* `stacked`
-
-
-### 3. Initialize Astro.
-
-```html
+<script src="dist/js/astro.js"></script>
 <script>
-	astro.init();
+	if ( 'querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_') ) {
+		astro( '.js-astro', '#nav' );
+	}
 </script>
 ```
 
-If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
+[See working examples in the demo.](http://cferdinandi.github.io/astro/)
 
 
 
@@ -124,58 +141,21 @@ There's a placeholder in the CSS to add styling to the current page in the navig
 
 
 
-## Options and Settings
-
-Astro includes smart defaults and works right out of the box. But if you want to customize things, it also has a robust API that provides multiple ways for you to adjust the default options and settings.
-
-### Global Settings
-
-You can pass options and callbacks into Astro through the `init()` function:
-
-```javascript
-astro.init({
-	toggleActiveClass: 'active', // Class added to active dropdown toggles on small screens
-	navActiveClass: 'active', // Class added to active dropdown content areas on small screens
-	initClass: 'js-astro', // Class added to `<html>` element when initiated
-	callback: function ( toggle, navID ) {} // Function that's run after a dropdown is toggled
-});
-```
-
-### Use Astro events in your own scripts
-
-You can also call Astro's navigation toggle event in your own scripts.
-
-#### toggleNav()
-Expand or collapse a navigation menu.
-
-```javascript
-astro.toggleNav(
-	toggle, // Node that toggles the dropdown action. ex. document.querySelector('#toggle')
-	navID, // ID of the navigation content wrapper. ex. '#nav-menu'
-	options, // Classes and callbacks. Same options as those passed into the init() function.
-	event // Optional, if a DOM event was triggered.
-);
-```
-
-**Example**
-
-```javascript
-astro.toggleNav( null, '#nav-menu' );
-```
-
-#### destroy()
-Destroy the current `astro.init()`. This is called automatically during the init function to remove any existing initializations.
-
-```javascript
-astro.destroy();
-```
-
-
 ## Browser Compatibility
 
 Astro works in all modern browsers, and IE 9 and above.
 
 Astro is built with modern JavaScript APIs, and uses progressive enhancement. If the JavaScript file fails to load, or if your site is viewed on older and less capable browsers, the Basic navigation patterns will be displayed instead of the Plus versions.
+
+### Cutting the Mustard
+
+You should check for `document.querySelector`, `window.addEventListener`, and `document.classList` support before calling `astro()`.
+
+```js
+if ( 'querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_') ) {
+	astro( ... );
+}
+```
 
 
 

@@ -62,21 +62,21 @@
 
 /**
  * Expand-and-Collapse styling for smaller screens.
- * .js-astro prefix ensure content is only hidden when JavaScript is supported.
+ * .astro prefix ensure content is only hidden when JavaScript is supported.
  */
 @media (max-width: $bp-medium) {
 
 	/**
 	 * Align text to the left when javascript is supported
 	 */
-	.js-astro .nav-wrap-navbar.nav-collapse  {
+	.astro .nav-wrap-navbar.nav-collapse  {
 		text-align: left;
 	}
 
 	/**
 	 * Display navigation toggle button if javascript is supported
 	 */
-	.js-astro .nav-collapse .nav-toggle-navbar {
+	.astro .nav-collapse .nav-toggle-navbar {
 		display: block;
 		visibility: visible;
 		float: right;
@@ -86,7 +86,7 @@
 	 * Hide navigation items if javascript is supported.
 	 * Show with `.active` class.
 	 */
-	.js-astro .nav-collapse .nav-menu-navbar {
+	.astro .nav-collapse .nav-menu-navbar {
 		box-sizing: border-box;
 		display: none;
 		width: 100%;
@@ -96,14 +96,14 @@
 		}
 	}
 
-	.js-astro .nav-collapse .nav-navbar {
+	.astro .nav-collapse .nav-navbar {
 		text-align: left;
 	}
 
 	/**
 	 * Display navigation items as full-width, stacked blocks when javascript supported
 	 */
-	.js-astro .nav-collapse .nav-menu-navbar li {
+	.astro .nav-collapse .nav-menu-navbar li {
 		display: block;
 		width: 100%;
 		padding-top: calc-em(4px);

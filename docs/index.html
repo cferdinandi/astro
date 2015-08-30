@@ -12,12 +12,19 @@
 		<link rel="stylesheet" href="dist/css/astro-navbar.css" type="text/css">
 		<link rel="stylesheet" href="dist/css/astro-navbar-left.css" type="text/css">
 		<link rel="stylesheet" href="dist/css/astro-stacked.css" type="text/css">
-		<link rel="stylesheet" href="assets/css/custom.css" type="text/css">
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
 	</head>
 
 	<body>
 
-		<main class="container">
+		<main>
 
 			<nav>
 				<h1>Astro</h1>
@@ -26,168 +33,145 @@
 			</nav>
 
 			<section>
+<h2 id="basic">Basic</h2>
+<p><p><strong>Simple</strong></p></p>
+<nav class="nav-wrap-basic">
+    <a class="logo-basic" href="#">My Brand</a>
+    <div class="nav-menu-basic">
+        <ul class="nav-basic">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<h2>Basic</h2>
+<p><p><strong>Expand-and-Collapse</strong></p></p>
+<nav class="nav-wrap-basic nav-collapse">
+    <a class="logo-basic" href="#">My Brand</a>
+    <a class="nav-toggle-basic js-astro-basic" href="#">Menu</a>
+    <div class="nav-menu-basic" id="nav-basic">
+        <ul class="nav-basic">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<p><strong>Simple</strong></p>
-	<nav class="nav-wrap-basic">
-		<a class="logo-basic" href="#">My Brand</a>
-		<a class="nav-toggle-basic" data-nav-toggle="#" href="#">Menu</a>
-		<div class="nav-menu-basic">
-			<ul class="nav-basic">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
+<p><br><br><br></p>
+<h2 id="basic-left">Basic Left</h2>
+<p><p><strong>Simple</strong></p></p>
+<nav class="nav-wrap-basic-left">
+    <a class="logo-basic-left" href="#">My Brand</a>
+    <div class="nav-menu-basic-left">
+        <ul class="nav-basic-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<p><strong>Expand-and-Collapse</strong></p>
-	<nav class="nav-wrap-basic nav-collapse">
-		<a class="logo-basic" href="#">My Brand</a>
-		<a class="nav-toggle-basic" data-nav-toggle="#basic" href="#">Menu</a>
-		<div class="nav-menu-basic" id="basic">
-			<ul class="nav-basic">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
+<p><p><strong>Expand-and-Collapse</strong></p></p>
+<nav class="nav-wrap-basic-left nav-collapse">
+    <a class="logo-basic-left" href="#">My Brand</a>
+    <a class="nav-toggle-basic-left js-astro-basic-left" href="#">Menu</a>
+    <div class="nav-menu-basic-left" id="nav-basic-left">
+        <ul class="nav-basic-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<br><br><br>
+<p><br><br><br></p>
+<h2 id="navbar">Navbar</h2>
+<p><p><strong>Simple</strong></p></p>
+<nav class="nav-wrap-navbar">
+    <a class="logo-navbar" href="#">My Brand</a>
+    <div class="nav-menu-navbar">
+        <ul class="nav-navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
+<p><p><strong>Expand-and-Collapse</strong></p></p>
+<nav class="nav-wrap-navbar nav-collapse">
+    <a class="logo-navbar" href="#">My Brand</a>
+    <a class="nav-toggle-navbar js-astro-navbar" href="#">Menu</a>
+    <div class="nav-menu-navbar" id="nav-navbar">
+        <ul class="nav-navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
+<p><br><br><br></p>
+<h2 id="navbar-left">Navbar Left</h2>
+<p><p><strong>Simple</strong></p></p>
+<nav class="nav-wrap-navbar-left">
+    <a class="logo-navbar-left" href="#">My Brand</a>
+    <div class="nav-menu-navbar-left">
+        <ul class="nav-navbar-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<h2>Basic Left</h2>
+<p><p><strong>Expand-and-Collapse</strong></p></p>
+<nav class="nav-wrap-navbar-left nav-collapse">
+    <a class="logo-navbar-left" href="#">My Brand</a>
+    <a class="nav-toggle-navbar-left js-astro-navbar-left" href="#">Menu</a>
+    <div class="nav-menu-navbar-left" id="nav-navbar-left">
+        <ul class="nav-navbar-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<p><strong>Simple</strong></p>
-	<nav class="nav-wrap-basic-left">
-		<a class="logo-basic-left" href="#">My Brand</a>
-		<a class="nav-toggle-basic-left" data-nav-toggle="#" href="#">Menu</a>
-		<div class="nav-menu-basic-left">
-			<ul class="nav-basic-left">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
+<p><br><br><br></p>
+<h2 id="stacked">Stacked</h2>
+<p><p><strong>Simple</strong></p></p>
+<nav class="nav-wrap-stacked">
+    <a class="logo-stacked" href="#">My Brand</a>
+    <div class="nav-menu-stacked">
+        <ul class="nav-stacked">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<p><strong>Expand-and-Collapse</strong></p>
-	<nav class="nav-wrap-basic-left nav-collapse">
-		<a class="logo-basic-left" href="#">My Brand</a>
-		<a class="nav-toggle-basic-left" data-nav-toggle="#basic-left" href="#">Menu</a>
-		<div class="nav-menu-basic-left" id="basic-left">
-			<ul class="nav-basic-left">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
+<p><p><strong>Expand-and-Collapse</strong></p></p>
+<nav class="nav-wrap-stacked nav-collapse">
+    <a class="logo-stacked" href="#">My Brand</a>
+    <a class="nav-toggle-stacked js-astro-stacked" href="#">Menu</a>
+    <div class="nav-menu-stacked" id="nav-stacked">
+        <ul class="nav-stacked">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
 
-	<br><br><br>
+<p><br><br><br></p>
 
-
-
-	<h2>Navbar</h2>
-
-	<p><strong>Simple</strong></p>
-	<nav class="nav-wrap-navbar">
-		<a class="logo-navbar" href="#">My Brand</a>
-		<a class="nav-toggle-navbar" data-nav-toggle="#" href="#">Menu</a>
-		<div class="nav-menu-navbar">
-			<ul class="nav-navbar">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<p><strong>Expand-and-Collapse</strong></p>
-	<nav class="nav-wrap-navbar nav-collapse">
-		<a class="logo-navbar" href="#">My Brand</a>
-		<a class="nav-toggle-navbar" data-nav-toggle="#navbar" href="#">Menu</a>
-		<div class="nav-menu-navbar" id="navbar">
-			<ul class="nav-navbar">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<br><br><br>
-
-
-
-	<h2>Navbar Left</h2>
-
-	<p><strong>Simple</strong></p>
-	<nav class="nav-wrap-navbar-left">
-		<a class="logo-navbar-left" href="#">My Brand</a>
-		<a class="nav-toggle-navbar-left" data-nav-toggle="#" href="#">Menu</a>
-		<div class="nav-menu-navbar-left">
-			<ul class="nav-navbar-left">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<p><strong>Expand-and-Collapse</strong></p>
-	<nav class="nav-wrap-navbar-left nav-collapse">
-		<a class="logo-navbar-left" href="#">My Brand</a>
-		<a class="nav-toggle-navbar-left" data-nav-toggle="#navbar-left" href="#">Menu</a>
-		<div class="nav-menu-navbar-left" id="navbar-left">
-			<ul class="nav-navbar-left">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<br><br><br>
-
-
-
-	<h2>Stacked</h2>
-
-	<p><strong>Simple</strong></p>
-	<nav class="nav-wrap-stacked">
-		<a class="logo-stacked" href="#">My Brand</a>
-		<a class="nav-toggle-stacked" data-nav-toggle="#" href="#">Menu</a>
-		<div class="nav-menu-stacked">
-			<ul class="nav-stacked">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<p><strong>Expand-and-Collapse</strong></p>
-	<nav class="nav-wrap-stacked nav-collapse">
-		<a class="logo-stacked" href="#">My Brand</a>
-		<a class="nav-toggle-stacked" data-nav-toggle="#stacked" href="#">Menu</a>
-		<div class="nav-menu-stacked" id="stacked">
-			<ul class="nav-stacked">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-
-	<br><br><br>
 			</section>
 		</main>
 
 		<!-- Javascript -->
-		<script src="dist/js/classList.js"></script>
 		<script src="dist/js/astro.js"></script>
 		<script>
-			astro.init({
-				toggleActiveClass: 'active',
-				navActiveClass: 'active',
-				initClass: 'js-astro',
-				callbackBefore: function () {},
-				callbackAfter: function () {}
-			});
+			if ( 'querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_') ) {
+				astro( '.js-astro-basic', '#nav-basic' );
+				astro( '.js-astro-basic-left', '#nav-basic-left' );
+				astro( '.js-astro-navbar', '#nav-navbar' );
+				astro( '.js-astro-navbar-left', '#nav-navbar-left' );
+				astro( '.js-astro-stacked', '#nav-stacked' );
+			}
 		</script>
 
 
