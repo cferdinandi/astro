@@ -53,6 +53,8 @@ All five navigation patterns use the same markup structure. Replace the `*` with
 
 ### 3. Initialize Astro.
 
+If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
+
 ```html
 <script>
 	if (
@@ -64,8 +66,6 @@ All five navigation patterns use the same markup structure. Replace the `*` with
 	}
 </script>
 ```
-
-If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
 
 
 
@@ -96,6 +96,7 @@ Make sure these are installed first.
 3. When it's done installing, run one of the task runners to get going:
 	* `gulp` manually compiles files.
 	* `gulp watch` automatically compiles files and applies changes using [LiveReload](http://livereload.com/).
+	* `gulp test` compiles files and runs unit tests.
 
 
 
