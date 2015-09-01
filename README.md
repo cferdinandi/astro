@@ -22,6 +22,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 	<script src="dist/js/astro.js"></script>
 	```
 2. Add the markup to your HTML.
+
 	All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. You should also add a unique selector to both your toggle element and the navigation container. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
 
 	```html
@@ -45,6 +46,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 	* `navbar-left`
 	* `stacked`
 3. Initialize Astro.
+
 	If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
 
 	```js
