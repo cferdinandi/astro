@@ -1,47 +1,62 @@
 /*!
- * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * Astro v9.0.0: Mobile-first navigation patterns
  * (c) 2015 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
  */
 
 /**
- * For text-based logo, override default link styling.
+ * Logo
  */
 /* line 4, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
 .logo-basic-left {
+  color: #272727;
   display: inline-block;
   font-size: 1.2em;
   line-height: 1.2;
-  color: #272727;
   margin-bottom: 0.5em;
   text-decoration: none;
 }
 
-/**
- * For text-based logo, override default link hover styling
- * */
-/* line 16, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+/* line 12, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
 .logo-basic-left:hover {
   color: #272727;
   text-decoration: none;
 }
 
 /**
- * Remove default list styling for navigation list
+ * Navigation Menu Container
  */
-/* line 24, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+@media (max-width: 40em) {
+  /* line 25, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+  .js-astro .nav-collapse .nav-menu-basic-left {
+    display: none;
+  }
+  /* line 28, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+  .js-astro .nav-collapse .nav-menu-basic-left.active {
+    display: block;
+  }
+  /* line 32, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+  .js-astro .nav-collapse .nav-menu-basic-left li {
+    display: block;
+    width: 100%;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    box-sizing: border-box;
+  }
+}
+
+/**
+ * Navigation Menu
+ */
+/* line 47, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
 .nav-basic-left {
   list-style: none;
   margin: 0 -0.5em;
   padding: 0;
 }
 
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-/* line 34, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+/* line 52, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
 .nav-basic-left > li {
   display: inline-block;
   float: none;
@@ -50,50 +65,19 @@
 }
 
 /**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
+ * Navigation Toggle
  */
-/* line 50, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+/* line 67, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
 .nav-toggle-basic-left {
   display: none;
   visibility: hidden;
 }
 
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
 @media (max-width: 40em) {
-  /**
-	 * Display navigation toggle button if javascript is supported
-	 */
-  /* line 65, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
-  .astro .nav-collapse .nav-toggle-basic-left {
+  /* line 72, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
+  .js-astro .nav-collapse .nav-toggle-basic-left {
     display: block;
     visibility: visible;
     float: right;
-  }
-  /**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-  /* line 75, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
-  .astro .nav-collapse .nav-menu-basic-left {
-    display: none;
-  }
-  /* line 78, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
-  .astro .nav-collapse .nav-menu-basic-left.active {
-    display: block;
-  }
-  /**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-  /* line 86, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-basic-left.scss */
-  .astro .nav-collapse .nav-menu-basic-left li {
-    display: block;
-    width: 100%;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    box-sizing: border-box;
   }
 }

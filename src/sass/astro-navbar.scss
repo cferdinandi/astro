@@ -1,3 +1,5 @@
-@import "config";
-@import "mixins";
-@import "components/astro-navbar";
+// Import the table styles for compiling
+@import
+	"config",
+	"mixins",
+	"components/astro-navbar";

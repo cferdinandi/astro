@@ -14,7 +14,7 @@
 <p><strong>Expand-and-Collapse</strong></p>
 <nav class="nav-wrap-basic nav-collapse">
 	<a class="logo-basic" href="#">My Brand</a>
-	<a class="nav-toggle-basic js-astro-basic" href="#">Menu</a>
+	<a class="nav-toggle-basic" data-nav-toggle="#nav-basic" href="#">Menu</a>
 	<div class="nav-menu-basic" id="nav-basic">
 		<ul class="nav-basic">
 			<li><a href="#">Home</a></li>
@@ -43,7 +43,7 @@
 <p><strong>Expand-and-Collapse</strong></p>
 <nav class="nav-wrap-basic-left nav-collapse">
 	<a class="logo-basic-left" href="#">My Brand</a>
-	<a class="nav-toggle-basic-left js-astro-basic-left" href="#">Menu</a>
+	<a class="nav-toggle-basic-left" data-nav-toggle="#nav-basic-left" href="#">Menu</a>
 	<div class="nav-menu-basic-left" id="nav-basic-left">
 		<ul class="nav-basic-left">
 			<li><a href="#">Home</a></li>
@@ -72,7 +72,7 @@
 <p><strong>Expand-and-Collapse</strong></p>
 <nav class="nav-wrap-navbar nav-collapse">
 	<a class="logo-navbar" href="#">My Brand</a>
-	<a class="nav-toggle-navbar js-astro-navbar" href="#">Menu</a>
+	<a class="nav-toggle-navbar" data-nav-toggle="#nav-navbar" href="#">Menu</a>
 	<div class="nav-menu-navbar" id="nav-navbar">
 		<ul class="nav-navbar">
 			<li><a href="#">Home</a></li>
@@ -101,7 +101,7 @@
 <p><strong>Expand-and-Collapse</strong></p>
 <nav class="nav-wrap-navbar-left nav-collapse">
 	<a class="logo-navbar-left" href="#">My Brand</a>
-	<a class="nav-toggle-navbar-left js-astro-navbar-left" href="#">Menu</a>
+	<a class="nav-toggle-navbar-left" data-nav-toggle="#nav-navbar-left" href="#">Menu</a>
 	<div class="nav-menu-navbar-left" id="nav-navbar-left">
 		<ul class="nav-navbar-left">
 			<li><a href="#">Home</a></li>
@@ -130,7 +130,7 @@
 <p><strong>Expand-and-Collapse</strong></p>
 <nav class="nav-wrap-stacked nav-collapse">
 	<a class="logo-stacked" href="#">My Brand</a>
-	<a class="nav-toggle-stacked js-astro-stacked" href="#">Menu</a>
+	<a class="nav-toggle-stacked" data-nav-toggle="#nav-stacked" href="#">Menu</a>
 	<div class="nav-menu-stacked" id="nav-stacked">
 		<ul class="nav-stacked">
 			<li><a href="#">Home</a></li>

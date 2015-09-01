@@ -5,13 +5,7 @@
 		<!-- Javascript -->
 		<script src="dist/js/astro.js"></script>
 		<script>
-			if ( 'querySelector' in document && 'addEventListener' in window && 'classList' in document.createElement('_') ) {
-				astro( '.js-astro-basic', '#nav-basic' );
-				astro( '.js-astro-basic-left', '#nav-basic-left' );
-				astro( '.js-astro-navbar', '#nav-navbar' );
-				astro( '.js-astro-navbar-left', '#nav-navbar-left' );
-				astro( '.js-astro-stacked', '#nav-stacked' );
-			}
+			astro.init();
 		</script>
 
 
