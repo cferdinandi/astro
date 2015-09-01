@@ -1,113 +1,97 @@
 /**
- * For text-based logo, override default link styling.
- * If .logo and .nav don't align properly, adjust the .logo line-height.
+ * Logo
  */
 .logo-stacked {
+	color: $color-black;
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: $color-black;
 	margin-bottom: calc-em(8px);
 	text-decoration: none;
+
+	&:hover {
+		color: $color-black;
+		text-decoration: none;
+	}
 }
 
+
+
 /**
- * For text-based logo, override default link hover styling
+ * Navigation Menu Container
  */
-.logo-stacked:hover {
-	color: $color-black;
-	text-decoration: none;
+.nav-menu-stacked {
+
+	/**
+	 * Hide navigation items if javascript is supported.
+	 */
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+
+			li {
+				box-sizing: border-box;
+				display: block;
+				padding-top: calc-em(4px);
+				padding-bottom: calc-em(4px);
+				width: 100%;
+			}
+		}
+	}
+
 }
 
+
 /**
- * Remove default list styling for navigation list
+ * Navigation Menu
  */
 .nav-stacked {
 	list-style: none;
 	margin: 0 calc-em(-8px);
 	padding: 0;
+
+	& > li {
+		display: inline-block;
+		float: none;
+		margin-left: calc-em(8px);
+		margin-right: calc-em(8px);
+
+		// Active link styling
+		&.active > a {}
+
+		@media (min-width: $bp-medium) {
+			box-sizing: border-box;
+			display: block;
+			padding-top: calc-em(4px);
+			padding-bottom: calc-em(4px);
+			width: 100%;
+		}
+	}
+
 }
 
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-.nav-stacked > li {
-	display: inline-block;
-	float: none;
-	margin-left: calc-em(8px);
-	margin-right: calc-em(8px);
-}
-
-// /**
-//  * Active link styling
-//  */
-// .nav-stacked > li.active > a {}
 
 /**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
+ * Navigation toggle
  */
 .nav-toggle-stacked {
 	display: none;
 	visibility: hidden;
-}
 
-
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
-@media (max-width: $bp-medium) {
-
-	/**
-	 * Display navigation toggle button if javascript is supported
-	 */
-	.astro .nav-collapse .nav-toggle-stacked {
-		display: block;
-		visibility: visible;
-		float: right;
-	}
-
-	/**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-	.astro .nav-collapse .nav-menu-stacked {
-		display: none;
-
-		&.active {
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
 			display: block;
+			float: right;
+			visibility: visible;
 		}
 	}
-
-	/**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-	.astro .nav-collapse .nav-menu-stacked li {
-		display: block;
-		width: 100%;
-		padding-top: calc-em(4px);
-		padding-bottom: calc-em(4px);
-		box-sizing: border-box;
-	}
-
 }
 
 
 /**
  * Styling for bigger screens.
  */
-@media (min-width: $bp-medium) {
-
-	.nav-stacked li {
-		display: block;
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-		padding-top: calc-em(4px);
-		padding-bottom: calc-em(4px);
-		box-sizing: border-box;
-	}
-
-}

@@ -1,94 +1,78 @@
 /**
- * For text-based logo, override default link styling.
+ * Logo
  */
 .logo-basic-left {
+	color: $color-black;
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: $color-black;
 	margin-bottom: calc-em(8px);
 	text-decoration: none;
+
+	&:hover {
+		color: $color-black;
+		text-decoration: none;
+	}
+}
+
+
+/**
+ * Navigation Menu Container
+ */
+.nav-menu-basic-left {
+
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+
+			li {
+				display: block;
+				width: 100%;
+				padding-top: calc-em(4px);
+				padding-bottom: calc-em(4px);
+				box-sizing: border-box;
+			}
+		}
+	}
+
 }
 
 /**
- * For text-based logo, override default link hover styling
- * */
-.logo-basic-left:hover {
-	color: $color-black;
-	text-decoration: none;
-}
-
-/**
- * Remove default list styling for navigation list
+ * Navigation Menu
  */
 .nav-basic-left {
 	list-style: none;
 	margin: 0 calc-em(-8px);
 	padding: 0;
+
+	& > li {
+		display: inline-block;
+		float: none;
+		margin-left: calc-em(8px);
+		margin-right: calc-em(8px);
+
+		// Active link styling
+		&.active > a {}
+	}
 }
 
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-.nav-basic-left > li {
-	display: inline-block;
-	float: none;
-	margin-left: calc-em(8px);
-	margin-right: calc-em(8px);
-}
-
-// /**
-//  * Active link styling
-//  */
-// .nav-basic-left > li.active > a {}
 
 /**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
+ * Navigation Toggle
  */
 .nav-toggle-basic-left {
 	display: none;
 	visibility: hidden;
-}
 
-
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
-@media (max-width: $bp-medium) {
-
-	/**
-	 * Display navigation toggle button if javascript is supported
-	 */
-	.astro .nav-collapse .nav-toggle-basic-left {
-		display: block;
-		visibility: visible;
-		float: right;
-	}
-
-	/**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-	.astro .nav-collapse .nav-menu-basic-left {
-		display: none;
-
-		&.active {
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
 			display: block;
+			visibility: visible;
+			float: right;
 		}
 	}
-
-	/**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-	.astro .nav-collapse .nav-menu-basic-left li {
-		display: block;
-		width: 100%;
-		padding-top: calc-em(4px);
-		padding-bottom: calc-em(4px);
-		box-sizing: border-box;
-	}
-
 }

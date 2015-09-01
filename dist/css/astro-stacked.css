@@ -1,48 +1,69 @@
 /*!
- * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * Astro v9.0.0: Mobile-first navigation patterns
  * (c) 2015 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
  */
 
 /**
- * For text-based logo, override default link styling.
- * If .logo and .nav don't align properly, adjust the .logo line-height.
+ * Logo
  */
-/* line 5, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+/* line 4, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
 .logo-stacked {
+  color: #272727;
   display: inline-block;
   font-size: 1.2em;
   line-height: 1.2;
-  color: #272727;
   margin-bottom: 0.5em;
   text-decoration: none;
 }
 
-/**
- * For text-based logo, override default link hover styling
- */
-/* line 17, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+/* line 12, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
 .logo-stacked:hover {
   color: #272727;
   text-decoration: none;
 }
 
 /**
- * Remove default list styling for navigation list
+ * Navigation Menu Container
  */
-/* line 25, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+/* line 23, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+.nav-menu-stacked {
+  /**
+	 * Hide navigation items if javascript is supported.
+	 */
+}
+
+@media (max-width: 40em) {
+  /* line 29, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+  .js-astro .nav-collapse .nav-menu-stacked {
+    display: none;
+  }
+  /* line 32, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+  .js-astro .nav-collapse .nav-menu-stacked.active {
+    display: block;
+  }
+  /* line 36, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+  .js-astro .nav-collapse .nav-menu-stacked li {
+    box-sizing: border-box;
+    display: block;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    width: 100%;
+  }
+}
+
+/**
+ * Navigation Menu
+ */
+/* line 52, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
 .nav-stacked {
   list-style: none;
   margin: 0 -0.5em;
   padding: 0;
 }
 
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-/* line 35, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+/* line 57, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
 .nav-stacked > li {
   display: inline-block;
   float: none;
@@ -50,67 +71,35 @@
   margin-right: 0.5em;
 }
 
+@media (min-width: 40em) {
+  /* line 57, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+  .nav-stacked > li {
+    box-sizing: border-box;
+    display: block;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    width: 100%;
+  }
+}
+
 /**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
+ * Navigation toggle
  */
-/* line 51, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+/* line 81, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
 .nav-toggle-stacked {
   display: none;
   visibility: hidden;
 }
 
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
 @media (max-width: 40em) {
-  /**
-	 * Display navigation toggle button if javascript is supported
-	 */
-  /* line 66, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .astro .nav-collapse .nav-toggle-stacked {
+  /* line 86, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
+  .js-astro .nav-collapse .nav-toggle-stacked {
     display: block;
-    visibility: visible;
     float: right;
-  }
-  /**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-  /* line 76, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .astro .nav-collapse .nav-menu-stacked {
-    display: none;
-  }
-  /* line 79, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .astro .nav-collapse .nav-menu-stacked.active {
-    display: block;
-  }
-  /**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-  /* line 87, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .astro .nav-collapse .nav-menu-stacked li {
-    display: block;
-    width: 100%;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    box-sizing: border-box;
+    visibility: visible;
   }
 }
 
 /**
  * Styling for bigger screens.
  */
-@media (min-width: 40em) {
-  /* line 103, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-stacked.scss */
-  .nav-stacked li {
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    box-sizing: border-box;
-  }
-}

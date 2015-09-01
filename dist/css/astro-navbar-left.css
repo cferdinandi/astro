@@ -1,140 +1,53 @@
 /*!
- * Astro v8.0.0: A collection of mobile-first navigation patterns.
+ * Astro v9.0.0: Mobile-first navigation patterns
  * (c) 2015 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
  */
 
 /**
- * Center all navigation elements
+ * Text Alignment
  */
 /* line 4, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
 .nav-wrap-navbar-left {
   text-align: center;
 }
 
+@media (max-width: 40em) {
+  /* line 8, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-wrap-navbar-left.nav-collapse {
+    text-align: left;
+  }
+}
+
+@media (min-width: 40em) {
+  /* line 4, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .nav-wrap-navbar-left {
+    text-align: left;
+  }
+}
+
 /**
- * For text-based logo, override default link styling.
- * If .logo and .nav don't align properly, adjust the .logo line-height.
+ * Logo
  */
-/* line 12, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+/* line 22, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
 .logo-navbar-left {
+  color: #272727;
   display: inline-block;
   font-size: 1.2em;
   line-height: 1.2;
-  color: #272727;
   margin-bottom: 0.5em;
   text-decoration: none;
 }
 
-/**
- * For text-based logo, override default link hover styling
- */
-/* line 24, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+/* line 30, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
 .logo-navbar-left:hover {
   color: #272727;
   text-decoration: none;
 }
 
-/**
- * Remove default list styling for navigation list
- */
-/* line 32, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-.nav-navbar-left {
-  list-style: none;
-  margin: 0 -0.5em;
-  padding: 0;
-}
-
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-/* line 42, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-.nav-navbar-left > li {
-  display: inline-block;
-  float: none;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
-/**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
- */
-/* line 58, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-.nav-toggle-navbar-left {
-  display: none;
-  visibility: hidden;
-}
-
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
-@media (max-width: 40em) {
-  /**
-	 * Align text to the left when javascript is supported
-	 */
-  /* line 73, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-wrap-navbar-left.nav-collapse {
-    text-align: left;
-  }
-  /**
-	 * Display navigation toggle button if javascript is supported
-	 */
-  /* line 80, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-collapse .nav-toggle-navbar-left {
-    display: block;
-    visibility: visible;
-    float: right;
-  }
-  /**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-  /* line 90, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-collapse .nav-menu-navbar-left {
-    display: none;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  /* line 95, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-collapse .nav-menu-navbar-left.active {
-    display: block;
-  }
-  /* line 100, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-collapse .nav-navbar-left {
-    text-align: left;
-  }
-  /**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-  /* line 107, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .astro .nav-collapse .nav-menu-navbar-left li {
-    display: block;
-    width: 100%;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    box-sizing: border-box;
-  }
-}
-
-/**
- * Styling for bigger screens.
- */
 @media (min-width: 40em) {
-  /**
-	 * Align text to the left
-	 */
-  /* line 126, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
-  .nav-wrap-navbar-left {
-    text-align: left;
-  }
-  /**
-	 * Float logo to the left, display as inline-block, and adjust margins
-	 */
-  /* line 133, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  /* line 22, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
   .logo-navbar-left {
     display: inline-block;
     float: left;
@@ -143,17 +56,83 @@
 }
 
 /**
+ * Navigation Menu Container
+ */
+@media (max-width: 40em) {
+  /* line 49, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-collapse .nav-menu-navbar-left {
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+  }
+  /* line 54, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-collapse .nav-menu-navbar-left.active {
+    display: block;
+  }
+  /* line 58, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-collapse .nav-menu-navbar-left li {
+    box-sizing: border-box;
+    display: block;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    width: 100%;
+  }
+}
+
+/**
+ * Navigation Menu
+ */
+/* line 74, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+.nav-navbar-left {
+  list-style: none;
+  margin: 0 -0.5em;
+  padding: 0;
+}
+
+/* line 79, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+.nav-navbar-left > li {
+  display: inline-block;
+  float: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 40em) {
+  /* line 90, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-collapse .nav-navbar-left {
+    text-align: left;
+  }
+}
+
+/**
+ * Navigation Toggle
+ */
+/* line 100, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+.nav-toggle-navbar-left {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 40em) {
+  /* line 105, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+  .js-astro .nav-collapse .nav-toggle-navbar-left {
+    display: block;
+    visibility: visible;
+    float: right;
+  }
+}
+
+/**
  * Clearfix
  */
-/* line 146, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+/* line 118, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
 .nav-wrap-navbar-left:before,
 .nav-wrap-navbar-left:after {
   display: table;
   content: "";
-  *zoom: 1;
 }
 
-/* line 152, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
+/* line 123, /Users/cferdinandi/Sites/astro/src/sass/components/_astro-navbar-left.scss */
 .nav-wrap-navbar-left:after {
   clear: both;
 }

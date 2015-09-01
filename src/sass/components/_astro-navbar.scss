@@ -1,143 +1,119 @@
 /**
- * Center all navigation elements
+ * Text alignment
  */
 .nav-wrap-navbar {
 	text-align: center;
+
+	@media (max-width: $bp-medium) {
+		.js-astro &.nav-collapse  {
+			text-align: left;
+		}
+	}
+
+	@media (min-width: $bp-medium) {
+		text-align: left;
+	}
 }
 
+
 /**
- * For text-based logo, override default link styling.
+ * Logo
  */
 .logo-navbar {
+	color: $color-black;
 	display: inline-block;
 	font-size: 1.2em;
 	line-height: 1.2;
-	color: $color-black;
 	margin-bottom: calc-em(8px);
 	text-decoration: none;
+
+	&:hover {
+		color: $color-black;
+		text-decoration: none;
+	}
+
+	@media (min-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			float: left;
+		}
+	}
+
+	@media (min-width: $bp-medium) {
+		float: left;
+	}
 }
 
+
 /**
- * For text-based logo, override default link hover styling
+ * Navigation Menu Container
  */
-.logo-navbar:hover {
-	color: $color-black;
-	text-decoration: none;
+.nav-menu-navbar {
+
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			box-sizing: border-box;
+			display: none;
+			width: 100%;
+
+			&.active {
+				display: block;
+			}
+
+			li {
+				display: block;
+				width: 100%;
+				padding-top: calc-em(4px);
+				padding-bottom: calc-em(4px);
+				box-sizing: border-box;
+			}
+		}
+	}
 }
 
+
 /**
- * Remove default list styling for navigation list
+ * Navigation Menu
  */
 .nav-navbar {
 	list-style: none;
 	margin: 0 calc-em(-8px);
 	padding: 0;
-}
 
-/**
- * Display navigation items as inline-block elements.
- * Add slight margin between each navigation item.
- */
-.nav-navbar > li {
-	display: inline-block;
-	float: none;
-	margin-left: calc-em(8px);
-	margin-right: calc-em(8px);
-}
+	& > li {
+		display: inline-block;
+		float: none;
+		margin-left: calc-em(8px);
+		margin-right: calc-em(8px);
 
-// /**
-// * Active link styling
-// */
-// .nav-navbar > li.active > a {}
-
-/**
- * Hide the navigation toggle menu button by default.
- * Only needed for expand-and-collapse option.
- * */
-.nav-toggle-navbar {
-	display: none;
-	visibility: hidden;
-}
-
-
-/**
- * Expand-and-Collapse styling for smaller screens.
- * .astro prefix ensure content is only hidden when JavaScript is supported.
- */
-@media (max-width: $bp-medium) {
-
-	/**
-	 * Align text to the left when javascript is supported
-	 */
-	.astro .nav-wrap-navbar.nav-collapse  {
-		text-align: left;
+		// Active Link Styling
+		&.active > a {}
 	}
 
-	/**
-	 * Display navigation toggle button if javascript is supported
-	 */
-	.astro .nav-collapse .nav-toggle-navbar {
-		display: block;
-		visibility: visible;
-		float: right;
-	}
-
-	/**
-	 * Hide navigation items if javascript is supported.
-	 * Show with `.active` class.
-	 */
-	.astro .nav-collapse .nav-menu-navbar {
-		box-sizing: border-box;
-		display: none;
-		width: 100%;
-
-		&.active {
-			display: block;
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			text-align: left;
 		}
 	}
 
-	.astro .nav-collapse .nav-navbar {
-		text-align: left;
+	@media (min-width: $bp-medium) {
+		text-align: right;
 	}
-
-	/**
-	 * Display navigation items as full-width, stacked blocks when javascript supported
-	 */
-	.astro .nav-collapse .nav-menu-navbar li {
-		display: block;
-		width: 100%;
-		padding-top: calc-em(4px);
-		padding-bottom: calc-em(4px);
-		box-sizing: border-box;
-	}
-
 }
 
 
 /**
- * Styling for bigger screens.
+ * Navigation Toggle
  */
-@media (min-width: $bp-medium) {
+.nav-toggle-navbar {
+	display: none;
+	visibility: hidden;
 
-	/**
-	 * Align text to the left
-	 */
-	.nav-wrap-navbar {
-		text-align: left;
-	}
-
-	/**
-	 * Float logo to the left and remove margin-bottom
-	 */
-	.logo-navbar {
-		float: left;
-	}
-
-	/**
-	 * Align navigation elements to the right
-	 */
-	.nav-navbar {
-		text-align: right;
+	@media (max-width: $bp-medium) {
+		.js-astro .nav-collapse & {
+			display: block;
+			float: right;
+			visibility: visible;
+		}
 	}
 }
 
@@ -145,6 +121,7 @@
 /**
  * Clearfix
  */
+
 .nav-wrap-navbar:before,
 .nav-wrap-navbar:after {
 	display: table;
