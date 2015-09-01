@@ -22,12 +22,12 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 	<script src="dist/js/astro.js"></script>
 	```
 2. Add the markup to your HTML.
-	All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
+	All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. You should also add a unique selector to both your toggle element and the navigation container. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
 
 	```html
 	<nav class="nav-wrap-* nav-collapse">
 		<a class="logo-*" href="#">My Brand</a>
-		<a class="nav-toggle-*" data-nav-toggle="#nav-menu" href="#">Menu</a>
+		<a class="nav-toggle-* js-astro" href="#">Menu</a>
 		<div class="nav-menu-*" id="nav-menu">
 			<ul class="nav-*">
 				<li><a href="#">Home</a></li>
@@ -48,7 +48,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 	If you're using the expand-and-collapse menu for smaller screens, initialize Astro in the footer of your page, after the content. And that's it, you're done. Nice work!
 
 	```js
-	astro( toggle, menus, cb );
+	astro(
 		toggle, // Selector for the element that toggles visibility (uses document.querySelector)
 		menus, // Selector for the menu (uses document.querySelectorAll)
 		cb // Callback to run after password visibility changes
