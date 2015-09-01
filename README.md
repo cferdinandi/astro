@@ -23,11 +23,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 <script src="dist/js/astro.js"></script>
 ```
 
-Astro is [built with Sass](http://sass-lang.com/) for easy customization. If you don't use Sass, that's ok. The `css` folder contains compiled vanilla CSS.
-
-The `_config.scss` and `_mixins.scss` files are the same ones used in [Kraken](http://cferdinandi.github.io/kraken/), so you can drop the `_astro-*.css` files right into Kraken without making any updates. Or, adjust the variables to suit your own project.
-
-The optional expand-and-collapse menu on smaller screens requires `astro.js`, and [classList.js](https://github.com/eligrey/classList.js) (a polyfill that extends ECMAScript 5 API support to more browsers). Basic versions can omit these files.
+The optional expand-and-collapse menu on smaller screens requires `astro.js`. Basic versions can omit this file.
 
 ### 2. Add the markup to your HTML.
 
@@ -85,7 +81,7 @@ You can install Astro with your favorite package manager.
 
 ## Working with the Source Files
 
-If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code, and runs unit tests. It's the same build system that's used by [Kraken](http://cferdinandi.github.io/kraken/), so it includes some unnecessary tasks and Sass variables but can be dropped right in to the boilerplate without any configuration.
+If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code, and runs unit tests.
 
 ### Dependencies
 Make sure these are installed first.
