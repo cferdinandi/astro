@@ -167,7 +167,7 @@ astro.destroy();
 
 ## Browser Compatibility
 
-Astro works in all modern browsers, and IE 9 and above.
+Astro works in all modern browsers, and IE 9 and above. You can push browser support back to IE 9 with the [classList.js polyfill](https://github.com/eligrey/classList.js/).
 
 Astro is built with modern JavaScript APIs, and uses progressive enhancement. If the JavaScript file fails to load, or if your site is viewed on older and less capable browsers, the Basic navigation patterns will be displayed instead of the Plus versions.
 
@@ -179,7 +179,7 @@ You should check for `document.querySelector`, `window.addEventListener`, and `d
 if (
 	'querySelector' in document &&
 	'addEventListener' in window &&
-	'classList' in document.createElement('_')
+	'classList' in document.createElement('_') // If you're not using the polyfill
 ) {
     astro.init();
 }
