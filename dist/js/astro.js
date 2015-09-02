@@ -1,5 +1,5 @@
 /*!
- * Astro v9.0.0: Mobile-first navigation patterns
+ * Astro v9.1.0: Mobile-first navigation patterns
  * (c) 2015 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
@@ -22,6 +22,7 @@
 	//
 
 	var astro = {}; // Object for public APIs
+	var supports = 'querySelector' in document && 'addEventListener' in root && 'classList' in document.createElement('_'); // Feature test
 	var settings;
 
 	// Default settings
@@ -201,6 +202,9 @@
 	 * @param {Object} options User settings
 	 */
 	astro.init = function ( options ) {
+
+		// feature test
+		if ( !supports ) return;
 
 		// Destroy any existing initializations
 		astro.destroy();

@@ -15,6 +15,7 @@
 	//
 
 	var astro = {}; // Object for public APIs
+	var supports = 'querySelector' in document && 'addEventListener' in root && 'classList' in document.createElement('_'); // Feature test
 	var settings;
 
 	// Default settings
@@ -194,6 +195,9 @@
 	 * @param {Object} options User settings
 	 */
 	astro.init = function ( options ) {
+
+		// feature test
+		if ( !supports ) return;
 
 		// Destroy any existing initializations
 		astro.destroy();
