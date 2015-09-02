@@ -57,13 +57,7 @@ If you're using the expand-and-collapse menu for smaller screens, initialize Ast
 
 ```html
 <script>
-	if (
-		'querySelector' in document &&
-		'addEventListener' in window &&
-		'classList' in document.createElement('_')
-	) {
-		astro.init();
-	}
+	astro.init();
 </script>
 ```
 
@@ -167,23 +161,9 @@ astro.destroy();
 
 ## Browser Compatibility
 
-Astro works in all modern browsers, and IE 10 and above. You can push browser support back to IE 9 with the [classList.js polyfill](https://github.com/eligrey/classList.js/).
+Astro works in all modern browsers, and IE 10 and above. You can extend browser support back to IE 9 with the [classList.js polyfill](https://github.com/eligrey/classList.js/).
 
 Astro is built with modern JavaScript APIs, and uses progressive enhancement. If the JavaScript file fails to load, or if your site is viewed on older and less capable browsers, the Basic navigation patterns will be displayed instead of the Plus versions.
-
-### Cutting the Mustard
-
-You should check for `document.querySelector`, `window.addEventListener`, and `document.classList` support before calling `astro.init()`.
-
-```js
-if (
-	'querySelector' in document &&
-	'addEventListener' in window &&
-	'classList' in document.createElement('_') // If you're not using the polyfill
-) {
-    astro.init();
-}
-```
 
 
 
