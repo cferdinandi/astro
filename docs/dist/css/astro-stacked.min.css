@@ -1,7 +1,0 @@
-/*! Astro v9.1.0 | (c) 2015 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/astro */
-/*!
- * Astro v9.1.0: Mobile-first navigation patterns
- * (c) 2015 Chris Ferdinandi
- * MIT License
- * http://github.com/cferdinandi/astro
- */.logo-stacked,.logo-stacked:hover{color:#272727;text-decoration:none}.logo-stacked{display:inline-block;font-size:1.2em;line-height:1.2;margin-bottom:.5em}@media (max-width:40em){.js-astro .nav-collapse .nav-menu-stacked{display:none}.js-astro .nav-collapse .nav-menu-stacked.active{display:block}.js-astro .nav-collapse .nav-menu-stacked li{box-sizing:border-box;display:block;padding-top:.25em;padding-bottom:.25em;width:100%}}.nav-stacked{list-style:none;margin:0 -.5em;padding:0}.nav-stacked>li{display:inline-block;float:none;margin-left:.5em;margin-right:.5em}@media (min-width:40em){.nav-stacked>li{box-sizing:border-box;display:block;padding-top:.25em;padding-bottom:.25em;width:100%}}.nav-toggle-stacked{display:none;visibility:hidden}@media (max-width:40em){.js-astro .nav-collapse .nav-toggle-stacked{display:block;float:right;visibility:visible}}

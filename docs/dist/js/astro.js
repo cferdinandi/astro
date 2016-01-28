@@ -1,6 +1,6 @@
 /*!
- * Astro v9.1.0: Mobile-first navigation patterns
- * (c) 2015 Chris Ferdinandi
+ * Astro v10.0.0: Mobile-first navigation patterns
+ * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
  */
