@@ -1,7 +1,7 @@
 /**
  * Text alignment
  */
-.nav-wrap-navbar {
+.nav-wrap {
 	text-align: center;
 
 	@media (max-width: $bp-medium) {
@@ -19,7 +19,7 @@
 /**
  * Logo
  */
-.logo-navbar {
+.logo {
 	color: $color-black;
 	display: inline-block;
 	font-size: 1.2em;
@@ -47,7 +47,7 @@
 /**
  * Navigation Menu Container
  */
-.nav-menu-navbar {
+.nav-menu {
 
 	@media (max-width: $bp-medium) {
 		.js-astro .nav-collapse & {
@@ -74,7 +74,7 @@
 /**
  * Navigation Menu
  */
-.nav-navbar {
+.nav {
 	list-style: none;
 	margin: 0 calc-em(-8px);
 	padding: 0;
@@ -104,7 +104,7 @@
 /**
  * Navigation Toggle
  */
-.nav-toggle-navbar {
+.nav-toggle {
 	display: none;
 	visibility: hidden;
 
@@ -122,12 +122,12 @@
  * Clearfix
  */
 
-.nav-wrap-navbar:before,
-.nav-wrap-navbar:after {
+.nav-wrap:before,
+.nav-wrap:after {
 	display: table;
 	content: "";
 }
 
-.nav-wrap-navbar:after {
+.nav-wrap:after {
 	clear: both;
 }

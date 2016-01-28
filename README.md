@@ -1,11 +1,5 @@
 # Astro [![Build Status](https://travis-ci.org/cferdinandi/astro.svg)](https://travis-ci.org/cferdinandi/astro)
-A collection of five mobile-first navigation patterns, with an optional expand-and-collapse menu on small screens.
-
-* **Basic.** A centered navigation and logo.
-* **Basic Left.** A left-aligned navigation and logo.
-* **Navbar.** An inline navigation and logo.
-* **Navbar Left.** An inline navigation and logo with left-aligned navigation.
-* **Stacked.** Stacked navigation and logo.
+A mobile-first navigation pattern, with an optional expand-and-collapse menu on small screens.
 
 [Download Astro](https://github.com/cferdinandi/astro/archive/master.zip) / [View the demo](http://cferdinandi.github.io/astro/)
 
@@ -18,8 +12,7 @@ Compiled and production-ready code can be found in the `dist` directory. The `sr
 ### 1. Include Astro on your site.
 
 ```html
-<!-- Replace the * with your chosen version of Astro -->
-<link rel="stylesheet" href="dist/css/astro-*.css">
+<link rel="stylesheet" href="dist/css/astro.css">
 <script src="dist/js/astro.js"></script>
 ```
 
@@ -27,28 +20,20 @@ The optional expand-and-collapse menu on smaller screens requires `astro.js`. Ba
 
 ### 2. Add the markup to your HTML.
 
-All five navigation patterns use the same markup structure. Replace the `*` with your chosen version of Astro. Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `nav-wrap-*` element.
+Make sure that the `[data-nav-toggle]` value matches the ID of the `.nav-menu` section. To activate expand-and-collapse functionality, add the `.nav-collapse` class to the `.nav-wrap` element.
 
 ```html
-<nav class="nav-wrap-* nav-collapse">
-	<a class="logo-*" href="#">My Brand</a>
-	<a class="nav-toggle-*" data-nav-toggle="#nav-menu" href="#">Menu</a>
-	<div class="nav-menu-*" id="nav-menu">
-		<ul class="nav-*">
+<nav class="nav-wrap nav-collapse">
+	<a class="logo" href="#">My Brand</a>
+	<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">Menu</a>
+	<div class="nav-menu" id="nav-menu">
+		<ul class="nav">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 		</ul>
 	</div>
 </nav>
 ```
-
-**Versions**
-
-* `basic`
-* `basic-left`
-* `navbar`
-* `navbar-left`
-* `stacked`
 
 
 ### 3. Initialize Astro.
@@ -100,7 +85,7 @@ There's a placeholder in the CSS to add styling to the current page in the navig
 
 ```css
 /*  Placeholder for active link styling */
-/*  .nav-* > li.active > a { */
+/*  .nav > li.active > a { */
 /*      Add your styles here */
 /*  } */
 ```
