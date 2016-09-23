@@ -1,5 +1,5 @@
 /*!
- * Astro v10.0.0: Mobile-first navigation patterns
+ * Astro v10.1.0: Mobile-first navigation patterns
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/astro
@@ -13,7 +13,7 @@
 	} else {
 		root.astro = factory(root);
 	}
-})(typeof global !== 'undefined' ? global : this.window || this.global, function (root) {
+})(typeof global !== 'undefined' ? global : this.window || this.global, (function (root) {
 
 	'use strict';
 
@@ -225,4 +225,4 @@
 
 	return astro;
 
-});
+}));
