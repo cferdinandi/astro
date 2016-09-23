@@ -7,7 +7,7 @@ A mobile-first navigation pattern, with an optional expand-and-collapse menu on 
 
 ## Getting Started
 
-Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code. Unit tests are located in the `test` directory.
+Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
 
 ### 1. Include Astro on your site.
 
@@ -60,7 +60,7 @@ You can install Astro with your favorite package manager.
 
 ## Working with the Source Files
 
-If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code, and runs unit tests.
+If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code.
 
 ### Dependencies
 Make sure these are installed first.
@@ -75,7 +75,6 @@ Make sure these are installed first.
 3. When it's done installing, run one of the task runners to get going:
 	* `gulp` manually compiles files.
 	* `gulp watch` automatically compiles files and applies changes using [LiveReload](http://livereload.com/).
-	* `gulp test` compiles files and runs unit tests.
 
 
 
