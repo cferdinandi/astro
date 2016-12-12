@@ -1,6 +1,6 @@
 {
 	"name": "Astro",
-	"version": "10.1.0",
+	"version": "10.2.0",
 	"description": "Mobile-first navigation patterns",
 	"main": "./dist/js/astro.min.js",
 	"author": {
