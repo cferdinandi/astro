@@ -4,6 +4,13 @@ A mobile-first navigation pattern, with an optional expand-and-collapse menu on 
 [Download Astro](https://github.com/cferdinandi/astro/archive/master.zip) / [View the demo](http://cferdinandi.github.io/astro/)
 
 
+<hr>
+
+### Want to learn how to write your own vanilla JS plugins? Check out ["The Vanilla JS Guidebook"](https://gomakethings.com/vanilla-js-guidebook/) and level-up as a web developer. 🚀
+
+<hr>
+
+
 
 ## Getting Started
 
